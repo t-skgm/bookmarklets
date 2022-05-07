@@ -7,8 +7,8 @@
 
 ## 利用方法
 
-- 利用したいスクリプトの `dist/XXX.txt` の内容をコピー
-- 先頭に `javascript:` を追加した上で、ブックマークの URL 欄にペースト
+- [Bookmarklets](https://raw.githubusercontent.com/t-skgm/march-am-bookmarklets/main/dist/bookmarklets.html) を開く
+- 使いたい Bookmarklet をブックマークバーにドラッグ
 
 ## 開発
 
