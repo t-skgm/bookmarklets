@@ -1,7 +1,7 @@
 <html>
-<head><title>march-am Bookmarklets</title></head>
+<head><title>Bookmarklets</title></head>
 <body>
-<h1>march-am Bookmarklets</h1>
+<h1>Bookmarklets</h1>
 <p>使いたいBookmarkletをブックマークバーにドラッグ</p>
 <ul>
 <li><a href="javascript:(()=%3E%7Bconst%20n=(a,g,d)=%3Eg.split(%22.%22).reduce((k,m)=%3Ek&&k%5Bm%5D,a)??d,l=(a,g)=%3E%7Ba=new%20Blob(%5Ba%5D,%7Btype:%22text/plan%22%7D);const%20d=document.createElement(%22a%22);d.href=URL.createObjectURL(a);d.download=g;d.click()%7D;var%20c=document.querySelector('script%5Btype=%22application/ld+json%22%5D').textContent,b=JSON.parse(c),h=b.track.itemListElement.map(a=%3E%60$%7Ba.position%7D.%20$%7Ba.item.name%7D%60);c=b.byArtist.name;var%20f=b.name,e=b%5B%22@id%22%5D;h=h.join(%22%5Cn%22);var%20p=b.description,q=b.creditText,r=b.datePublished,t=b.copyrightNotice,u=b.keywords.join(%22,%20%22);l(c+%22%5Cn%22+f+%22%5Cn%22+e+%22%5Cn%5Cn%3CTrack%20list%3E%5Cn%22+h+%22%5Cn%5Cn%3CDescription%3E%5Cn%22+p+%22%5Cn%5Cn%3CCredits%3E%5Cn%22+q+%22%5Cn%5Cn%3CPublished%3E%5Cn%22+r+%22%5Cn%5Cn%3CLisence%3E%5Cn%22+t+%22%5Cn%5Cn%3CTags%3E%5Cn%22+u,%60$%7Bc%7D%20-%20$%7Bf%7D.txt%60);b=b.track.itemListElement.map(a=%3E(%7Bid:a.item%5B%22@id%22%5D,title:%60$%7Ba.position%7D.%20$%7Ba.item.name%7D%60,lyrics:n(a,%22item.recordingOf.lyrics.text%22)%7D));e=document.querySelectorAll(%22.info_link%22);e=Array.from(e).filter(a=%3Ea.textContent.includes(%22info%22)).map(a=%3E%60$%7Blocation.origin%7D$%7Ba.querySelector(%22a%22).getAttribute(%22href%22)%7D%60);if(b.every(a=%3Evoid%200!==a.lyrics)%7C%7C0!==e.length)b=b.map(a=%3Ea.title+%22%5Cn%5Cn%22+(a.lyrics??%22(none)%22)).join(%22%5Cn%5Cn%22),l(c+%22%20-%20%22+f+%22%5Cn%5Cn%22+b,%60$%7Bc%7D%20-%20$%7Bf%7D%20Tracks.txt%60)%7D)();">save-bandcamp-description</a></li>
