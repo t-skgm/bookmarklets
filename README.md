@@ -1,4 +1,4 @@
-# march-am-bookmarklets
+# bookmarklets
 
 ## 動作環境
 
@@ -7,7 +7,7 @@
 
 ## 利用方法
 
-- [Bookmarklets](https://t-skgm.github.io/march-am-bookmarklets/) ページを開く
+- [Bookmarklets](https://t-skgm.github.io/bookmarklets/) ページを開く
 - 使いたい Bookmarklet をブックマークバーにドラッグ
 
 ## 開発
@@ -26,3 +26,7 @@ $ pnpm build
 ```
 
 ref: [google/closure\-compiler: A JavaScript checker and optimizer\.](https://github.com/google/closure-compiler)
+
+## TODO
+
+- トラックごとの Description がある場合に取得する

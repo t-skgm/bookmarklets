@@ -1,8 +1,7 @@
 {
-  "name": "march-am-bookmarklets",
+  "name": "bookmarklets",
   "version": "0.0.0",
-  "description": "march-am bookmarklets",
-  "author": "march-am",
+  "description": "bookmarklets",
   "license": "ISC",
   "engines": {
     "pnpm": ">= 6"
