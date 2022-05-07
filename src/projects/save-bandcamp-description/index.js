@@ -1,6 +1,10 @@
+/**
+ * BandcampのDescriptionをテキストファイルとして保存する
+ */
 (() => {
   // get object value by path
-  const get = (value, path) => path.split('.').reduce((acc, v) => (acc = acc && acc[v]), value);
+  const get = (value, path, defaultValue) =>
+    path.split('.').reduce((acc, v) => (acc = acc && acc[v]), value) ?? defaultValue;
   // content をテキストファイルとしてダウンロードさせる
   const downloadTextFile = (content, filename) => {
     const blob = new Blob([content], { type: 'text/plan' });
@@ -33,7 +37,8 @@
   const albumBody =
     d.artist + '\n' +
     d.title + '\n' +
-    d.url + '\n\n' +
+    d.url + '\n' +
+    '\n' +
     '<Track list>\n' +
     d.trackList + '\n' +
     '\n' +
@@ -65,9 +70,11 @@
   const urlsToSongsThatHasInfo = Array.from(trackInfoList)
     .filter(info => info.textContent.includes('info'))
     .map(info => `${location.origin}${info.querySelector('a').getAttribute('href')}`);
-  const hasLyricsOrInfo = lyricsList.every(i => i.lyrics !== undefined) || urlsToSongsThatHasInfo.length !== 0;
 
+  const hasLyricsOrInfo = lyricsList.every(i => i.lyrics !== undefined) || urlsToSongsThatHasInfo.length !== 0;
   if (hasLyricsOrInfo) {
+    // TODO: Download each track page to get track info
+
     const trackTexts = lyricsList.map(i => i.title + '\n\n' + (i.lyrics ?? '(none)')).join('\n\n');
     const tracksBody = d.artist + ' - ' + d.title + '\n\n' + trackTexts;
 

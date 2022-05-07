@@ -7,11 +7,11 @@
 
 ## 利用方法
 
-- 利用したいスクリプトの `dist/XXX.js` の内容をコピー
+- 利用したいスクリプトの `dist/XXX.txt` の内容をコピー
 - 先頭に `javascript:` を追加した上で、ブックマークの URL 欄にペースト
 
 ## 開発
 
-- `PRJ_NAME=save-bandcamp-description pnpm build:prj`
+- `pnpm build`
 
 ref: [google/closure\-compiler: A JavaScript checker and optimizer\.](https://github.com/google/closure-compiler)

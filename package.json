@@ -4,15 +4,13 @@
   "description": "march-am bookmarklets",
   "author": "march-am",
   "license": "ISC",
-  "main": "index.js",
   "engines": {
     "pnpm": ">= 6"
   },
   "scripts": {
     "lint": "eslint 'src/**/*.js'",
     "format": "prettier --write 'src/**/*.js'",
-    "build:prj": "pnpm build-base --js \"src/${PRJ_NAME}/index.js\" --js_output_file \"dist/${PRJ_NAME}.js\"",
-    "build-base": "google-closure-compiler --language_in ECMASCRIPT_NEXT --language_out ECMASCRIPT_NEXT --compilation_level SIMPLE"
+    "build": "node ./src/compileToBookmarklet.mjs"
   },
   "devDependencies": {
     "eslint": "^8.15.0",
