@@ -1,11 +1,11 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: ["esnext"],
+  extends: ['eslint:recommended', 'esnext'],
   env: {
     es6: true,
-    browser: true,
+    browser: true
   },
   rules: {
-    "no-unused-vars": "warn",
-  },
+    'no-unused-vars': 'warn'
+  }
 };
