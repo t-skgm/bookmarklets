@@ -1,7 +1,7 @@
 /**
  * BandcampのDescriptionをテキストファイルとして保存する
  */
-(() => {
+(async () => {
   // get object value by path
   const get = (value, path, defaultValue) =>
     path.split('.').reduce((acc, v) => (acc = acc && acc[v]), value) ?? defaultValue;
@@ -12,6 +12,13 @@
     link.href = URL.createObjectURL(blob);
     link.download = filename;
     link.click();
+  };
+  const domparser = new DOMParser();
+  const fetchJsonLd = async url => {
+    const htmlStr = await fetch(url).then(h => h.text());
+    const doc = domparser.parseFromString(htmlStr, 'text/html');
+    const trackldStr = doc.querySelector('script[type="application/ld+json"]').textContent;
+    return JSON.parse(trackldStr);
   };
 
   // Album description //
@@ -62,7 +69,7 @@
   // Track description //
 
   const lyricsList = ld.track.itemListElement.map(el => ({
-    id: el.item['@id'],
+    url: el.item['@id'],
     title: `${el.position}. ${el.item.name}`,
     lyrics: get(el, 'item.recordingOf.lyrics.text')
   }));
@@ -73,10 +80,26 @@
 
   const hasLyricsOrInfo = lyricsList.every(i => i.lyrics !== undefined) || urlsToSongsThatHasInfo.length !== 0;
   if (hasLyricsOrInfo) {
-    // TODO: Download each track page to get track info
+    const trackTexts = await Promise.all(
+      lyricsList.map(async i => {
+        let text = i.title + '\n';
 
-    const trackTexts = lyricsList.map(i => i.title + '\n\n' + (i.lyrics ?? '(none)')).join('\n\n');
-    const tracksBody = d.artist + ' - ' + d.title + '\n\n' + trackTexts;
+        // Infoがある曲
+        if (urlsToSongsThatHasInfo.includes(i.url)) {
+          const trackLd = await fetchJsonLd(i.url);
+          const info = trackLd.description;
+          const credit = trackLd.creditText;
+          if (info) text += '<Description>\n' + info + '\n';
+          if (credit) text += '<Credit>\n' + credit + '\n';
+        }
+
+        if (i.lyrics) text += '<Lyrics>\n' + i.lyrics;
+
+        return text;
+      })
+    );
+
+    const tracksBody = d.artist + ' - ' + d.title + '\n\n' + trackTexts.join('\n\n');
 
     downloadTextFile(tracksBody, `${d.artist} - ${d.title} Tracks.txt`);
   }
