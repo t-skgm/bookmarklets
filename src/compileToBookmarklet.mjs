@@ -5,9 +5,15 @@ const { compiler: Compiler } = gcc;
 // eslint-disable-next-line no-script-url
 const bookmarkletPrefix = 'javascript:';
 
+const configs = {
+  htmlPath: './docs/index.html',
+  distDir: './docs/',
+  projectsDir: './src/projects/'
+};
+
 const compile = async projectId => {
   const compiler = new Compiler({
-    js: `src/projects/${projectId}/index.js`,
+    js: `${configs.projectsDir}${projectId}/index.js`,
     compilation_level: 'SIMPLE',
     language_in: 'ECMASCRIPT_NEXT',
     language_out: 'ECMASCRIPT_NEXT'
@@ -22,7 +28,7 @@ const compile = async projectId => {
   });
 };
 
-fs.readdir('./src/projects', (_err, projectIds) => {
+fs.readdir(configs.projectsDir, (_err, projectIds) => {
   console.log('target projects:', projectIds);
 
   Promise.all(
@@ -30,22 +36,22 @@ fs.readdir('./src/projects', (_err, projectIds) => {
       const compiled = await compile(id);
 
       // save each script text
-      fs.writeFileSync(`dist/${id}.txt`, compiled, { encoding: 'utf8' });
+      fs.writeFileSync(`${configs.distDir}${id}.txt`, compiled, { encoding: 'utf8' });
 
       return { id, compiled };
     })
   ).then(scripts => {
     const markletsHtml = `<html>
-<head><title>Bookmarklets</title></head>
+<head><title>march-am Bookmarklets</title></head>
 <body>
-<h1>Bookmarklets</h1>
+<h1>march-am Bookmarklets</h1>
 <p>使いたいBookmarkletをブックマークバーにドラッグ</p>
 <ul>
 ${scripts.map(script => `<li><a href="${encodeURI(script.compiled)}">${script.id}</a></li>`)}
 </ul>
 </body>
 </html>`;
-    fs.writeFileSync(`dist/bookmarklets.html`, markletsHtml, { encoding: 'utf8' });
+    fs.writeFileSync(configs.htmlPath, markletsHtml, { encoding: 'utf8' });
 
     console.log('done!', scripts);
   });
