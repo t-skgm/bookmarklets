@@ -7,7 +7,7 @@
 
 ## 利用方法
 
-- [Bookmarklets](https://raw.githubusercontent.com/t-skgm/march-am-bookmarklets/main/dist/bookmarklets.html) を開く
+- [Bookmarklets](https://t-skgm.github.io/march-am-bookmarklets/) ページを開く
 - 使いたい Bookmarklet をブックマークバーにドラッグ
 
 ## 開発
