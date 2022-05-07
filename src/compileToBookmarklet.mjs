@@ -42,9 +42,9 @@ fs.readdir(configs.projectsDir, (_err, projectIds) => {
     })
   ).then(scripts => {
     const markletsHtml = `<html>
-<head><title>march-am Bookmarklets</title></head>
+<head><title>Bookmarklets</title></head>
 <body>
-<h1>march-am Bookmarklets</h1>
+<h1>Bookmarklets</h1>
 <p>使いたいBookmarkletをブックマークバーにドラッグ</p>
 <ul>
 ${scripts.map(script => `<li><a href="${encodeURI(script.compiled)}">${script.id}</a></li>`)}
