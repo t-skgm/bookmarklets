@@ -5,7 +5,14 @@
   "author": "march-am",
   "license": "ISC",
   "main": "index.js",
+  "engines": {
+    "pnpm": ">= 6"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:prj": "pnpm build-base --js \"src/${PRJ_NAME}/index.js\" --js_output_file \"dist/${PRJ_NAME}.js\"",
+    "build-base": "google-closure-compiler --language_in ECMASCRIPT_NEXT --language_out ECMASCRIPT_NEXT"
+  },
+  "devDependencies": {
+    "google-closure-compiler": "^20220502.0.0"
   }
 }
