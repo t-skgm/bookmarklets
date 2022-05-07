@@ -21,27 +21,29 @@
     return JSON.parse(trackldStr);
   };
 
-  // Album description //
+  try {
+    console.log('[marklet] script starts');
+    // Album description //
 
-  const ldStr = document.querySelector('script[type="application/ld+json"]').textContent;
-  const ld = JSON.parse(ldStr);
+    const ldStr = document.querySelector('script[type="application/ld+json"]').textContent;
+    const ld = JSON.parse(ldStr);
 
-  const tracks = ld.track.itemListElement.map(el => `${el.position}. ${el.item.name}`);
+    const tracks = ld.track.itemListElement.map(el => `${el.position}. ${el.item.name}`);
 
-  const d = {
-    artist: ld.byArtist.name,
-    title: ld.name,
-    url: ld['@id'],
-    trackList: tracks.join('\n'),
-    description: ld.description,
-    credits: ld.creditText,
-    published: ld.datePublished,
-    lisence: ld.copyrightNotice,
-    tags: ld.keywords.join(', ')
-  };
+    const d = {
+      artist: ld.byArtist.name,
+      title: ld.name,
+      url: ld['@id'],
+      trackList: tracks.join('\n'),
+      description: ld.description,
+      credits: ld.creditText,
+      published: ld.datePublished,
+      lisence: ld.copyrightNotice,
+      tags: ld.keywords.join(', ')
+    };
 
-  // prettier-ignore
-  const albumBody =
+    // prettier-ignore
+    const albumBody =
     d.artist + '\n' +
     d.title + '\n' +
     d.url + '\n' +
@@ -64,43 +66,49 @@
     '<Tags>\n' +
     d.tags;
 
-  downloadTextFile(albumBody, `${d.artist} - ${d.title}.txt`);
+    downloadTextFile(albumBody, `${d.artist} - ${d.title}.txt`);
 
-  // Track description //
+    // Track description //
 
-  const lyricsList = ld.track.itemListElement.map(el => ({
-    url: el.item['@id'],
-    title: `${el.position}. ${el.item.name}`,
-    lyrics: get(el, 'item.recordingOf.lyrics.text')
-  }));
-  const trackInfoList = document.querySelectorAll('.info_link');
-  const urlsToSongsThatHasInfo = Array.from(trackInfoList)
-    .filter(info => info.textContent.includes('info'))
-    .map(info => `${location.origin}${info.querySelector('a').getAttribute('href')}`);
+    const lyricsList = ld.track.itemListElement.map(el => ({
+      url: el.item['@id'],
+      title: `${el.position}. ${el.item.name}`,
+      lyrics: get(el, 'item.recordingOf.lyrics.text')
+    }));
+    const trackInfoList = document.querySelectorAll('.info_link');
+    const urlsToSongsThatHasInfo = Array.from(trackInfoList)
+      .filter(info => info.textContent.includes('info'))
+      .map(info => `${location.origin}${info.querySelector('a').getAttribute('href')}`);
 
-  const hasLyricsOrInfo = lyricsList.every(i => i.lyrics !== undefined) || urlsToSongsThatHasInfo.length !== 0;
-  if (hasLyricsOrInfo) {
-    const trackTexts = await Promise.all(
-      lyricsList.map(async i => {
-        let text = i.title + '\n';
+    const hasLyricsOrInfo = lyricsList.some(i => i.lyrics !== undefined) || urlsToSongsThatHasInfo.length !== 0;
+    if (hasLyricsOrInfo) {
+      console.log("[marklet] this album has some track info. let's download it");
+      const trackTexts = await Promise.all(
+        lyricsList.map(async i => {
+          let text = i.title + '\n';
 
-        // Infoがある曲
-        if (urlsToSongsThatHasInfo.includes(i.url)) {
-          const trackLd = await fetchJsonLd(i.url);
-          const info = trackLd.description;
-          const credit = trackLd.creditText;
-          if (info) text += '<Description>\n' + info + '\n';
-          if (credit) text += '<Credit>\n' + credit + '\n';
-        }
+          // Infoがある曲
+          if (urlsToSongsThatHasInfo.includes(i.url)) {
+            const trackLd = await fetchJsonLd(i.url);
+            const info = trackLd.description;
+            const credit = trackLd.creditText;
+            if (info) text += '<Description>\n' + info + '\n';
+            if (credit) text += '<Credit>\n' + credit + '\n';
+          }
 
-        if (i.lyrics) text += '<Lyrics>\n' + i.lyrics;
+          if (i.lyrics) text += '<Lyrics>\n' + i.lyrics;
 
-        return text;
-      })
-    );
+          return text;
+        })
+      );
 
-    const tracksBody = d.artist + ' - ' + d.title + '\n\n' + trackTexts.join('\n\n');
+      const tracksBody = d.artist + ' - ' + d.title + '\n\n' + trackTexts.join('\n\n');
 
-    downloadTextFile(tracksBody, `${d.artist} - ${d.title} Tracks.txt`);
+      downloadTextFile(tracksBody, `${d.artist} - ${d.title} Tracks.txt`);
+    }
+
+    console.log('[marklet] script finished!');
+  } catch (e) {
+    alert('[marklet] Error!', e.message);
   }
 })();

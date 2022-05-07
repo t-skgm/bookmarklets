@@ -8,6 +8,7 @@ module.exports = {
   },
   rules: {
     'no-unused-vars': 'warn',
-    'import/no-nodejs-modules': 'off'
+    'import/no-nodejs-modules': 'off',
+    'no-alert': 'off'
   }
 };
