@@ -12,6 +12,17 @@
 
 ## 開発
 
-- `pnpm build`
+```bash
+# install pnpm
+$ node --version
+> v16.11.1
+$ corepack enable
+
+# install deps
+$ pnpm install
+
+# build scripts
+$ pnpm build
+```
 
 ref: [google/closure\-compiler: A JavaScript checker and optimizer\.](https://github.com/google/closure-compiler)
