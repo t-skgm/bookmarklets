@@ -5,6 +5,9 @@
   // get object value by path
   const get = (value, path, defaultValue) =>
     path.split('.').reduce((acc, v) => (acc = acc && acc[v]), value) ?? defaultValue;
+
+  const parseDate = str => new Date(str).toISOString().slice(0, 10);
+
   // content をテキストファイルとしてダウンロードさせる
   const downloadTextFile = (content, filename) => {
     const blob = new Blob([content], { type: 'text/plan' });
@@ -13,6 +16,7 @@
     link.download = filename;
     link.click();
   };
+
   const domparser = new DOMParser();
   const fetchJsonLd = async url => {
     const htmlStr = await fetch(url).then(h => h.text());
@@ -34,12 +38,12 @@
       artist: ld.byArtist.name,
       title: ld.name,
       url: ld['@id'],
-      trackList: tracks.join('\n'),
-      description: ld.description,
-      credits: ld.creditText,
-      published: ld.datePublished,
-      lisence: ld.copyrightNotice,
-      tags: ld.keywords.join(', ')
+      trackList: tracks.join('\n') ?? '-',
+      description: ld.description ?? '-',
+      credits: ld.creditText ?? '-',
+      published: parseDate(ld.datePublished),
+      lisence: ld.copyrightNotice ?? '-',
+      tags: ld.keywords.join(', ') ?? '-'
     };
 
     // prettier-ignore
