@@ -34,6 +34,15 @@
 
     const tracks = ld.track.itemListElement.map(el => `${el.position}. ${el.item.name}`);
 
+    const buildPublisherText = pb =>
+      `[name]\n${pb.name}\n\n` +
+      `[location]\n${pb.foundingLocation.name}\n\n` +
+      '[description]\n' +
+      pb.description +
+      '\n\n' +
+      '[website]\n' +
+      pb.mainEntityOfPage.map(p => `* ${p.name} (${p.url})\n`);
+
     const d = {
       artist: ld.byArtist.name,
       title: ld.name,
@@ -43,7 +52,8 @@
       credits: ld.creditText ?? '-',
       published: parseDate(ld.datePublished),
       lisence: ld.copyrightNotice ?? '-',
-      tags: ld.keywords.join(', ') ?? '-'
+      tags: ld.keywords.join(', ') ?? '-',
+      publisherText: buildPublisherText(ld.publisher)
     };
 
     // prettier-ignore
@@ -68,7 +78,10 @@
     d.lisence  + '\n' +
     '\n' +
     '<Tags>\n' +
-    d.tags;
+    d.tags +  '\n' +
+    '\n' +
+    '<Publisher>' + '\n' +
+    d.publisherText;
 
     downloadTextFile(albumBody, `${d.artist} - ${d.title}.txt`);
 

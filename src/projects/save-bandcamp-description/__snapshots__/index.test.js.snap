@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`save-bandcamp-description execute script verify generated text data 1`] = `
+exports[`save-bandcamp-description execute script generated text data 1`] = `
 "Martin Carr
 Crazy Faces (Songs For Snod (2012-2019))
 https://martincarr.bandcamp.com/album/crazy-faces-songs-for-snod-2012-2019
@@ -48,5 +48,22 @@ The cover is a photograph I took during the filming, somewhere in Manchester, 20
 All Rights Reserved
 
 <Tags>
-Pop, Cardiff"
+Pop, Cardiff
+
+<Publisher>
+[name]
+Martin Carr
+
+[location]
+Cardiff, UK
+
+[description]
+Martin Carr.
+The Black Serpent Choir.
+bravecaptain
+What Future
+
+[website]
+* Twitter (https://twitter.com/#!/Martin_Carr)
+"
 `;

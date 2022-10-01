@@ -50,7 +50,7 @@ describe('save-bandcamp-description', () => {
       expect(linkClickSpy).toBeCalledTimes(1);
     });
 
-    test('verify generated text data', () => {
+    test('generated text data', () => {
       const textData = createObjectURLSpy.mock.calls[0][0].blobParts[0];
 
       expect(textData).toMatchSnapshot();
