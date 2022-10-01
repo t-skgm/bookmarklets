@@ -1,10 +1,14 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: ['eslint:recommended', 'esnext'],
+  extends: ['eslint:recommended'],
   env: {
-    es6: true,
+    es2022: true,
     browser: true,
-    node: true
+    node: true,
+    jest: true
+  },
+  parserOptions: {
+    sourceType: 'module'
   },
   rules: {
     'no-unused-vars': 'warn',
