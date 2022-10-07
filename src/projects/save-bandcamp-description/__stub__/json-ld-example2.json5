@@ -1,0 +1,573 @@
+// https://clairmont.bandcamp.com/album/strength-like-lions
+{
+  '@id': 'https://clairmont.bandcamp.com/album/strength-like-lions',
+  '@type': 'MusicAlbum',
+  '@context': 'https://schema.org',
+  albumReleaseType: 'AlbumRelease',
+  image: 'https://f4.bcbits.com/img/a1408998543_10.jpg',
+  description: 'In the spring of 2004, Clairmont formed in the unsuspecting town of College Station, TX. Immediately the band became dedicated to writing a fresh and entertaining catalog of songs. Their unique sound and truthful lyrics were selected as the title track for the Esotype Records Compilation One: The Real Life Threats of You and Me. Soon after recording their first track, Clairmont began writing and producing their first album, The Dweller EP. The release in 2005 established that Clairmont would be around for awhile and would continue to write ballads for the new millennium. The band continued to play live shows in and around Texas to promote their new record and started to gain a faithful following. Their live show is one of energy and passion as the band strives to display the image their songs are about.\r\n\r\nClairmont just finished recording their first LP entitled Strength Like Lions under the engineering and production of The Mix Lab in College Station. This new album is a major testament to all of their trials and hard work that they have put forth over the last four years.',
+  dateModified: '15 Jul 2011 18:33:28 GMT',
+  datePublished: '01 Jun 2008 00:00:00 GMT',
+  copyrightNotice: 'All Rights Reserved',
+  name: 'Strength Like Lions',
+  keywords: ['Indie Computer Rock', 'College Station'],
+  numTracks: 12,
+  byArtist: {
+    name: 'Clairmont',
+    '@type': 'MusicGroup',
+    '@id': 'https://clairmont.bandcamp.com'
+  },
+  albumRelease: [
+    {
+      identifier: '733792819924',
+      musicReleaseFormat: 'DigitalFormat',
+      offers: {
+        availability: 'OnlineOnly',
+        additionalProperty: [
+          {
+            value: 1000.0,
+            name: 'max_price',
+            '@type': 'PropertyValue'
+          }
+        ],
+        priceSpecification: {
+          minPrice: 0.0
+        },
+        '@type': 'Offer',
+        price: 0.0,
+        url: 'https://clairmont.bandcamp.com/album/strength-like-lions#a3190521370-buy',
+        priceCurrency: 'USD'
+      },
+      name: 'Strength Like Lions',
+      additionalProperty: [
+        {
+          value: 3190521370,
+          name: 'item_id',
+          '@type': 'PropertyValue'
+        },
+        {
+          value: 'a',
+          name: 'item_type',
+          '@type': 'PropertyValue'
+        },
+        {
+          value: 500978162,
+          name: 'selling_band_id',
+          '@type': 'PropertyValue'
+        },
+        {
+          value: 'Digital',
+          name: 'type_name',
+          '@type': 'PropertyValue'
+        },
+        {
+          value: 1408998543,
+          name: 'art_id',
+          '@type': 'PropertyValue'
+        },
+        {
+          value: "*** To redeem your download code, visit www.clairmontonline.com/free ***\r\n\r\nImmediate download of 12-track album in your choice of 320k mp3, FLAC, or just about any other format you could possibly desire.\r\n\r\nBe sure to check out our webpage at www.clairmontonline.com. And WELCOME to Facebookers, don't  forget to become a fan at facebook.com/clairmontmusic",
+          name: 'digital_release_description',
+          '@type': 'PropertyValue'
+        }
+      ],
+      '@type': ['MusicRelease', 'Product'],
+      image: ['https://f4.bcbits.com/img/a1408998543_10.jpg'],
+      description: 'Includes high-quality download in MP3, FLAC and more. Paying supporters also get unlimited streaming via the free Bandcamp app.',
+      '@id': 'https://clairmont.bandcamp.com/album/strength-like-lions'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://clairmont.bandcamp.com/track/breathing-in'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://clairmont.bandcamp.com/track/leslie'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://clairmont.bandcamp.com/track/a-thousand-casts'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://clairmont.bandcamp.com/track/quiet-prophets-i'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://clairmont.bandcamp.com/track/the-call'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://clairmont.bandcamp.com/track/dear-to-the-one'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://clairmont.bandcamp.com/track/taste-of-iron'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://clairmont.bandcamp.com/track/our-fight'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://clairmont.bandcamp.com/track/meaningless-entanglement'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://clairmont.bandcamp.com/track/heres-to-september'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://clairmont.bandcamp.com/track/quiet-prophets-ii'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://clairmont.bandcamp.com/track/last-words'
+    }
+  ],
+  track: {
+    numberOfItems: 12,
+    '@type': 'ItemList',
+    itemListElement: [
+      {
+        position: 1,
+        '@type': 'ListItem',
+        item: {
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              text: "It's like breathing in the air.\r\nI didn't come for your wealth.\r\nNo, I came for your heart\r\nAnd the words I have for you\r\nCould tear you apart.\r\n\r\nSo don't close your eyes\r\nAnd don't turn away.\r\nCause the answer's been on its way.\r\n\r\nIt's been on its way.",
+              '@type': 'CreativeWork'
+            }
+          },
+          copyrightNotice: 'All Rights Reserved',
+          name: 'Breathing In',
+          additionalProperty: [
+            {
+              value: 2448126644,
+              name: 'track_id',
+              '@type': 'PropertyValue'
+            },
+            {
+              value: 'all_rights_reserved',
+              name: 'license_name',
+              '@type': 'PropertyValue'
+            }
+          ],
+          duration: 'P00H03M22S',
+          '@type': 'MusicRecording',
+          '@id': 'https://clairmont.bandcamp.com/track/breathing-in'
+        }
+      },
+      {
+        position: 2,
+        '@type': 'ListItem',
+        item: {
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              text: "This is where it starts\r\nSo pick up here and go far\r\nFor traveling, no wandering.\r\nWhich way to go\r\nA sign will tell you, then know\r\nHis love will help you get by.\r\n\r\nThis is the dance, the way we move tonight\r\n\r\nA chance to see what’s beyond the bend\r\nA chance to see the other side\r\n\r\nLeads to everything calling out\r\nTo everything that’s calling out.\r\n\r\nThis is the road to mark so we can get lost\r\nThis is the road to mark so we can go far.\r\n\r\nThis is the dance, the way we move tonight\r\n\r\nYou know, you know you’re not the only one.\r\nDrive on, drive on to the setting sun.\r\nTake me, take me\r\n\r\nOne day you will understand\r\nForgetting the bias in us all.\r\nAnd one day we will understand\r\nYeah we'll burn our hearts down\r\nYeah we'll burn this part down\r\nAnd be refined as gold.\r\n\r\nThis is the dance, the way we move tonight\r\n\r\nAnd still we may not go\r\nAs if we're ever gone\r\n\r\nBut we drive, try, make, and take\r\nI don’t have it all, the answers I don’t know.",
+              '@type': 'CreativeWork'
+            }
+          },
+          copyrightNotice: 'All Rights Reserved',
+          name: 'Leslie',
+          additionalProperty: [
+            {
+              value: 2300737057,
+              name: 'track_id',
+              '@type': 'PropertyValue'
+            },
+            {
+              value: 'all_rights_reserved',
+              name: 'license_name',
+              '@type': 'PropertyValue'
+            }
+          ],
+          duration: 'P00H04M36S',
+          '@type': 'MusicRecording',
+          '@id': 'https://clairmont.bandcamp.com/track/leslie'
+        }
+      },
+      {
+        position: 3,
+        '@type': 'ListItem',
+        item: {
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              text: "I've been marching all night to the sound of a beating drum\r\nAnd it has taken over me faster than I can breathe\r\nBut it's much too late for an escape.\r\n\r\nYou know that it's starting to feel like home\r\n\r\nIt's dark, this night, as the TV lights up your floor\r\nAnd watch as it creeps right out your door\r\nIt lights up your room, this empty room\r\n\r\nYou know that it's starting to feel like home\r\n\r\nBecause of what you say\r\nOh what's the meaning\r\nAnd what I say\r\nWhat is the meaning\r\n\r\nCause its a parking lot\r\nIt's so full of cracks\r\nWe will take these words\r\nAnd we'll mend like that",
+              '@type': 'CreativeWork'
+            }
+          },
+          copyrightNotice: 'All Rights Reserved',
+          name: 'A Thousand Casts',
+          additionalProperty: [
+            {
+              value: 1398605006,
+              name: 'track_id',
+              '@type': 'PropertyValue'
+            },
+            {
+              value: 'all_rights_reserved',
+              name: 'license_name',
+              '@type': 'PropertyValue'
+            }
+          ],
+          duration: 'P00H04M07S',
+          '@type': 'MusicRecording',
+          '@id': 'https://clairmont.bandcamp.com/track/a-thousand-casts'
+        }
+      },
+      {
+        position: 4,
+        '@type': 'ListItem',
+        item: {
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              text: 'Softly you speak the words for the one to hear,\r\nBut it’s not like me to be the one who is outspoken.\r\nCause it’s like me to be the one to not say anything at all.\r\n\r\nBut in light of this one and in light of this son\r\nOh in light of this time and in light of this war.',
+              '@type': 'CreativeWork'
+            }
+          },
+          copyrightNotice: 'All Rights Reserved',
+          name: 'Quiet Prophets I',
+          additionalProperty: [
+            {
+              value: 1363979454,
+              name: 'track_id',
+              '@type': 'PropertyValue'
+            },
+            {
+              value: 'all_rights_reserved',
+              name: 'license_name',
+              '@type': 'PropertyValue'
+            }
+          ],
+          duration: 'P00H01M53S',
+          '@type': 'MusicRecording',
+          '@id': 'https://clairmont.bandcamp.com/track/quiet-prophets-i'
+        }
+      },
+      {
+        position: 5,
+        '@type': 'ListItem',
+        item: {
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              text: "Give me a second and I'll let you in\r\nGive me a sign and let me know that you care\r\nIt's cold, but it's summer time\r\nI'ts not but here it goes again.\r\n\r\nThe waves will come in and take away\r\nThe signs will be here all night long\r\nThere won't be a second chance\r\nYou can't get a second chance\r\nSo don't get caught up in this.\r\nWe get caught up in this.\r\n\r\nNow we can talk about this all night long\r\nBut we might not get anywhere.\r\nIt's not what we came here for\r\nBut it is what we are fighting for.\r\n\r\nThe waves will come in and take away\r\nThe signs will be here all night long\r\nThere won't be a second chance\r\nYou can't get a second chance\r\nSo don't get caught up in this.\r\nWe get caught up in this.\r\n\r\nThis is the way it seems\r\nBeing caught up in the webs they leave\r\nJust the way it seems\r\n\r\nThis is the way it seems\r\nBeing caught up in the webs they leave\r\nIn the cracks\r\nthe darkness sets\r\nWhere the cold resides\r\nOr am I used to it\r\n\r\nWe can talk about this all night long\r\nBut we might not get anywhere\r\nGive me a second and I'll let you in\r\nGive me a sign and let me know that you care\r\nI should of told you this was not pretend\r\nIt's like I'm married to this desease\r\nJust a call is what I'm waiting for\r\n\r\nYou know that the way is my own\r\nNot the way of others\r\nSo take every part of me\r\nAnd carve away\r\nWatch the weight sink in",
+              '@type': 'CreativeWork'
+            }
+          },
+          copyrightNotice: 'All Rights Reserved',
+          name: 'The Call',
+          additionalProperty: [
+            {
+              value: 4083255092,
+              name: 'track_id',
+              '@type': 'PropertyValue'
+            },
+            {
+              value: 'all_rights_reserved',
+              name: 'license_name',
+              '@type': 'PropertyValue'
+            }
+          ],
+          duration: 'P00H05M00S',
+          '@type': 'MusicRecording',
+          '@id': 'https://clairmont.bandcamp.com/track/the-call'
+        }
+      },
+      {
+        position: 6,
+        '@type': 'ListItem',
+        item: {
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              text: "Dear to the one who will make it this far\r\nI liked the breeze and the feel of night time\r\nSo come, come with me take a sigh of relief\r\nThis could well be, be our last.\r\nNow that we have gone to farthest lengths\r\nYou’ll soon forget what you’ve seen in time.  \r\nHere in the silence\r\nLet go of the least, and take my case.\r\n\r\nAnd will you remember me when you get back (when you get back someday)\r\nIn light of my own tragedy?\r\nWho? Well I ask who am I - well then who am I this?\r\nIn my own tragedy.\r\n\r\nTell me why it's hard to breathe\r\nWhen the only thing around is air?\r\nTell me why is it hard for this heart to beat\r\nWhen it’s the only thing this heart is wanting.\r\n\r\nAnd will you remember me when you get back\r\nIn light of my own tragedy?\r\nWho? Well I ask who am I - well then who am I this?\r\nIn my own tragedy.\r\n\r\nWell then who am I in this?\r\n\r\nAnd will you remember me when you get back (when you get back someday)\r\nIn light of my own tragedy?\r\nYou were the only one who would listen\r\nIn my own tragedy.",
+              '@type': 'CreativeWork'
+            }
+          },
+          copyrightNotice: 'All Rights Reserved',
+          name: 'Dear to the One',
+          additionalProperty: [
+            {
+              value: 909463866,
+              name: 'track_id',
+              '@type': 'PropertyValue'
+            },
+            {
+              value: 'all_rights_reserved',
+              name: 'license_name',
+              '@type': 'PropertyValue'
+            }
+          ],
+          duration: 'P00H04M30S',
+          '@type': 'MusicRecording',
+          '@id': 'https://clairmont.bandcamp.com/track/dear-to-the-one'
+        }
+      },
+      {
+        position: 7,
+        '@type': 'ListItem',
+        item: {
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              text: "When I was out you lifted your hands up to the air\r\nAnd changed my skies\r\nAnd you taught me how.\r\nBut have I come so far to just lose so much\r\nWell have I given up? (no I won’t give up)\r\nWill I ever learn?\r\n\r\nTo make a choice to be fully confident\r\nBut it can just turn out to be another one of those things.\r\nHave we talked too much, have we learned too much?\r\nWill we ever learn?\r\n\r\nAnd I get away only in your voice\r\nBut to be what you say, what is it to be everything\r\nBut I still get away only in your voice.\r\n\r\nTo make a choice to be fully confident\r\nBut it can just turn out to be another one of those things\r\nHave we talked too much and have we touched too much?\r\nWill we ever learn?\r\n\r\nAnd I get away only in your voice,\r\nBut to be what you say, what is it to be everything\r\nBut I still get away.\r\n\r\nWith strength like a lion\r\nAnd words of a liar\r\nWho leaves nothing to be\r\nTries to steal me away.\r\n\r\nHe'll never leave you in the cold.",
+              '@type': 'CreativeWork'
+            }
+          },
+          copyrightNotice: 'All Rights Reserved',
+          name: 'Taste Of Iron',
+          additionalProperty: [
+            {
+              value: 200946213,
+              name: 'track_id',
+              '@type': 'PropertyValue'
+            },
+            {
+              value: 'all_rights_reserved',
+              name: 'license_name',
+              '@type': 'PropertyValue'
+            }
+          ],
+          duration: 'P00H07M17S',
+          '@type': 'MusicRecording',
+          '@id': 'https://clairmont.bandcamp.com/track/taste-of-iron'
+        }
+      },
+      {
+        position: 8,
+        '@type': 'ListItem',
+        item: {
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              text: 'As I fight my fight will you fight your fight?\r\nWill you be there still in the place I call home?\r\nNow there’s a broken candlelight and the creepy silent night.\r\nOh does that scare you?\r\n\r\nBut don’t forget about the stars in our sky\r\nAnd the coals in our fire\r\nHow they burn red.\r\n\r\nOh la la la la la.\r\n\r\nSo will you take my hand and hold it tight?\r\nAnd will you take my flame and hold it high with you?\r\nWhen the boat is ready, we’ll leave in the morning.\r\n\r\nOh la la la la la la.',
+              '@type': 'CreativeWork'
+            }
+          },
+          copyrightNotice: 'All Rights Reserved',
+          name: 'Our Fight',
+          additionalProperty: [
+            {
+              value: 3865632821,
+              name: 'track_id',
+              '@type': 'PropertyValue'
+            },
+            {
+              value: 'all_rights_reserved',
+              name: 'license_name',
+              '@type': 'PropertyValue'
+            }
+          ],
+          duration: 'P00H01M49S',
+          '@type': 'MusicRecording',
+          '@id': 'https://clairmont.bandcamp.com/track/our-fight'
+        }
+      },
+      {
+        position: 9,
+        '@type': 'ListItem',
+        item: {
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              text: "She finds comfort in all these things\r\nSearching for all that comfort brings.\r\nWhere she opens up her heart to take it all apart\r\nOnly to fall asleep at night, never making it right.\r\nWe could count our fingers for all these things\r\nAnd that won’t bring us, not a single thing.\r\n\r\nAnd it waits for you now.\r\n\r\nBreaks you down\r\nAnd it takes you down\r\nWill we ever understand\r\nWhat we put our hearts through\r\nWith this meaningless entanglement?\r\n\r\nWhy so blind, is it that hard to see?\r\nHow wrapped up in this you don’t claim to be\r\nTell me why here, why now?\r\nAll this stuff all on the floor, well it has been here for a while.\r\n\r\nIt's time to break free.\r\n\r\nBreaks you down\r\nAnd it takes you down\r\nWill we ever understand\r\nWhat we put our hearts through\r\nWith this meaningless entanglement?\r\n\r\nHold\r\n\r\nYou call it love\r\nWell I call it nothing\r\n\r\nWill we ever understand\r\nWhat we put our hearts through\r\nWith this meaningless entanglement?",
+              '@type': 'CreativeWork'
+            }
+          },
+          copyrightNotice: 'All Rights Reserved',
+          name: 'Meaningless Entanglement',
+          additionalProperty: [
+            {
+              value: 2456705159,
+              name: 'track_id',
+              '@type': 'PropertyValue'
+            },
+            {
+              value: 'all_rights_reserved',
+              name: 'license_name',
+              '@type': 'PropertyValue'
+            }
+          ],
+          duration: 'P00H06M06S',
+          '@type': 'MusicRecording',
+          '@id': 'https://clairmont.bandcamp.com/track/meaningless-entanglement'
+        }
+      },
+      {
+        position: 10,
+        '@type': 'ListItem',
+        item: {
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              text: "We are like salt on the Earth\r\nThousands of voices in my head\r\nHow they whisper to this.\r\n\r\nI'll take all the time to clear a line\r\n I find it fleeting\r\nIf my hearts not in it.\r\n\r\nJust a soft word that is said\r\nBeats the many words that\r\nHave yet to appear.\r\n\r\nAnd so thousands of voices in my head\r\nHow they whisper to this.\r\n\r\nBut confidence is fleeting\r\nif your hearts not in it.\r\n\r\nBut when the time comes\r\nTo you you'll see.\r\nWill you get out of bed\r\nOr still be a sleep.\r\n\r\nI won’t fear cause there’s enough for me\r\nThat’s just what I see\r\nThat’s good enough for me\r\n\r\nAnd since the first verse that was said.\r\nThere’s been no accomplishment that can get you in\r\nAnd to the last words on this Earth\r\nThey don’t belong to me.\r\nThat's just what I see.\r\n\r\nAnd so thousands of voices in my head\r\nHow they whisper to this.\r\n\r\nBut confidence is fleeting\r\nif your hearts not in it.\r\n\r\nAnd to the sound a heart makes\r\nwhen it aches.\r\n\r\nAnd so this is where I leave it in your hands\r\nJust where I leave it in your hands.",
+              '@type': 'CreativeWork'
+            }
+          },
+          copyrightNotice: 'All Rights Reserved',
+          name: "Here's To September",
+          additionalProperty: [
+            {
+              value: 145675340,
+              name: 'track_id',
+              '@type': 'PropertyValue'
+            },
+            {
+              value: 'all_rights_reserved',
+              name: 'license_name',
+              '@type': 'PropertyValue'
+            }
+          ],
+          duration: 'P00H06M06S',
+          '@type': 'MusicRecording',
+          '@id': 'https://clairmont.bandcamp.com/track/heres-to-september'
+        }
+      },
+      {
+        position: 11,
+        '@type': 'ListItem',
+        item: {
+          copyrightNotice: 'All Rights Reserved',
+          name: 'Quiet Prophets II',
+          additionalProperty: [
+            {
+              value: 2272531649,
+              name: 'track_id',
+              '@type': 'PropertyValue'
+            },
+            {
+              value: 'all_rights_reserved',
+              name: 'license_name',
+              '@type': 'PropertyValue'
+            }
+          ],
+          duration: 'P00H01M24S',
+          '@type': 'MusicRecording',
+          '@id': 'https://clairmont.bandcamp.com/track/quiet-prophets-ii'
+        }
+      },
+      {
+        position: 12,
+        '@type': 'ListItem',
+        item: {
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              text: "It’s the unannounced\r\nComing out of a broken heart\r\nAnd to make it beat again\r\nIt's the world’s sound\r\nIt’s the constant now\r\nSo that you can just come right in\r\nAnd change its beat again.\r\n\r\nI know you and you know me\r\nTime moves fast it's plain to see\r\nSo let’s not tear it down let’s mix it up\r\nLet’s not tear it down let’s just mix it up\r\n\r\nI love you and you love me\r\nAnd I need that it’s plain to see\r\nSo let’s not tear it down let’s mix it up.\r\nLet’s not tear it down let’s just mix it up\r\n\r\nI had a chance, Oh what a chance\r\nBut I lost it all, how I lost it all\r\nSo let’s not tear it down lets mix it up.\r\n\r\nWhy don’t you believe me, why don’t you?\r\nCome on and believe me, why don't you?\r\nBecause you said the words to me\r\nThey were so hard to cover up.\r\nBlame it on me\r\nGo ahead and blame it on me. \r\n\r\nWill it ever come up again?\r\nWell have I missed my chance?\r\nWill it ever come up again?\r\n\r\nIf you have it in you then sing.\r\n\r\nBut I’ll take the last words\r\nAnd I fall well I fall\r\nBut I take what I want\r\nAnd what I want is what I want\r\nAnd you know that it's your will.",
+              '@type': 'CreativeWork'
+            }
+          },
+          copyrightNotice: 'All Rights Reserved',
+          name: 'Last Words',
+          additionalProperty: [
+            {
+              value: 3694478527,
+              name: 'track_id',
+              '@type': 'PropertyValue'
+            },
+            {
+              value: 'all_rights_reserved',
+              name: 'license_name',
+              '@type': 'PropertyValue'
+            }
+          ],
+          duration: 'P00H05M30S',
+          '@type': 'MusicRecording',
+          '@id': 'https://clairmont.bandcamp.com/track/last-words'
+        }
+      }
+    ]
+  },
+  additionalProperty: [
+    {
+      value: 1408998543,
+      name: 'art_id',
+      '@type': 'PropertyValue'
+    },
+    {
+      value: 1,
+      name: 'featured_track_num',
+      '@type': 'PropertyValue'
+    },
+    {
+      value: 'all_rights_reserved',
+      name: 'license_name',
+      '@type': 'PropertyValue'
+    }
+  ],
+  publisher: {
+    name: 'Clairmont',
+    mainEntityOfPage: [
+      {
+        name: 'clairmontonline.com',
+        '@type': 'WebSite',
+        url: 'http://www.clairmontonline.com'
+      }
+    ],
+    additionalProperty: [
+      {
+        value: 500978162,
+        name: 'band_id',
+        '@type': 'PropertyValue'
+      },
+      {
+        value: 'USD',
+        name: 'currency',
+        '@type': 'PropertyValue'
+      },
+      {
+        value: true,
+        name: 'has_any_downloads',
+        '@type': 'PropertyValue'
+      },
+      {
+        value: true,
+        name: 'has_download_codes',
+        '@type': 'PropertyValue'
+      },
+      {
+        value: true,
+        name: 'has_policies',
+        '@type': 'PropertyValue'
+      }
+    ],
+    '@type': 'MusicGroup',
+    foundingLocation: {
+      name: 'College Station',
+      '@type': 'Place'
+    },
+    subjectOf: [
+      {
+        name: 'music',
+        additionalProperty: [
+          {
+            value: 'm',
+            name: 'nav_type',
+            '@type': 'PropertyValue'
+          }
+        ],
+        '@type': 'WebPage',
+        url: 'https://clairmont.bandcamp.com/music'
+      },
+      {
+        name: 'community',
+        additionalProperty: [
+          {
+            value: 'c',
+            name: 'nav_type',
+            '@type': 'PropertyValue'
+          }
+        ],
+        '@type': 'WebPage',
+        url: 'https://clairmont.bandcamp.com/community'
+      }
+    ],
+    '@id': 'https://clairmont.bandcamp.com'
+  }
+}

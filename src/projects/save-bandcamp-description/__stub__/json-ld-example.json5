@@ -1,0 +1,662 @@
+// https://martincarr.bandcamp.com/album/crazy-faces-songs-for-snod-2012-2019
+{
+  '@id': 'https://martincarr.bandcamp.com/album/crazy-faces-songs-for-snod-2012-2019',
+  '@type': 'MusicAlbum',
+  '@context': 'https://schema.org',
+  name: 'Crazy Faces (Songs For Snod (2012-2019))',
+  numTracks: 13,
+  description: "Sometime ago, my friend David Quantick sent me a book of short stories, urging me to read the one called Snodgrass by Ian R Mcleod. Alternative histories don't tend to interest me too much but Snodgrass made me laugh out loud. I filed it alongside National Lampoon's 'Tragical Misery Tour' in my internal Non-Beatle Beatle things that are very funny folder. \r\n\r\nFast forward to 2012 and I'm ten years adrift, earning no money and unable to finish anything. I've cut myself off from social media and, with two very young children, sleeping even less than usual. DQ sends me an email asking me to write the music for a tv adaptation of Snodgrass. Yeah! I say. Yeah! Yeah! Yeah!\r\n\r\nI meet the producer, Mike, and the three of us have long and boozy conversations about script and music and The Beatles. I set up a slapback delay and every morning I go into the studio and pretend I'm a middle-aged man who threw it all away. Turns out there was no pretense necessary. \r\n\r\nLater, I catch the red-eye up to Manchester to meet up with the director David Blair, the director, Ian R McLeod, Mike and DQ, and Ian Hart, who is playing Lennon for the third time. There follows a lot of drinking and laughing. \r\n\r\nThe film is shown on Sky Arts and that is that.\r\n\r\nSince then there has been talk of a feature film. Songs and scripts have been written, actors auditioned, and money chased but it looks like it's not going to happen. \r\n\r\nThese are not the versions used in the film, I don't think I own those. These are the demos, they crackle and pop but I think they sound pretty good. \r\n\r\nI hope you enjoy this album x",
+  datePublished: '05 Mar 2022 00:00:00 GMT',
+  creditText: 'All songs by Martin Carr\r\nThe cover is a photograph I took during the filming, somewhere in Manchester, 2012.',
+  copyrightNotice: 'All Rights Reserved',
+  albumReleaseType: 'AlbumRelease',
+  dateModified: '05 Mar 2022 11:12:28 GMT',
+  image: 'https://f4.bcbits.com/img/a1031227022_10.jpg',
+  keywords: ['Pop', 'Cardiff'],
+  byArtist: {
+    '@type': 'MusicGroup',
+    name: 'Martin Carr',
+    '@id': 'https://martincarr.bandcamp.com'
+  },
+  comment: [
+    // omitted
+  ],
+  albumRelease: [
+    {
+      '@type': ['MusicRelease', 'Product'],
+      name: 'Crazy Faces (Songs For Snod (2012-2019))',
+      offers: {
+        '@type': 'Offer',
+        additionalProperty: [
+          {
+            '@type': 'PropertyValue',
+            name: 'max_price',
+            value: 1000
+          }
+        ],
+        url: 'https://martincarr.bandcamp.com/album/crazy-faces-songs-for-snod-2012-2019#a3546708034-buy',
+        availability: 'OnlineOnly',
+        price: 10,
+        priceSpecification: {
+          minPrice: 10
+        },
+        priceCurrency: 'GBP'
+      },
+      description: 'Includes high-quality download in MP3, FLAC and more. Paying supporters also get unlimited streaming via the free Bandcamp app.',
+      additionalProperty: [
+        {
+          '@type': 'PropertyValue',
+          name: 'item_id',
+          value: 3546708034
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'item_type',
+          value: 'a'
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'selling_band_id',
+          value: 4100826536
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'type_name',
+          value: 'Digital'
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'art_id',
+          value: 1031227022
+        }
+      ],
+      musicReleaseFormat: 'DigitalFormat',
+      '@id': 'https://martincarr.bandcamp.com/album/crazy-faces-songs-for-snod-2012-2019',
+      image: ['https://f4.bcbits.com/img/a1031227022_10.jpg']
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/one-fine-day'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/crazy-faces'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/im-alright'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/cal'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/easy-come-easy-go'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/world-in-action'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/the-years-roll-down-my-face'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/jack-jones'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/only-you-can-see-me'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/land-of-the-living'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/snodgrass'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/the-years-roll-down-my-face-easy-come-easy-go-reprise'
+    },
+    {
+      '@type': 'MusicRelease',
+      '@id': 'https://martincarr.bandcamp.com/track/your-body'
+    }
+  ],
+  track: {
+    '@type': 'ItemList',
+    numberOfItems: 13,
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: 'One Fine Day',
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              '@type': 'CreativeWork',
+              text: "The first thing given to me was a lucky face\nI could charm the birds out of the trees before I could tie my lace\nI was a backstreet Pharoah, nobody could take my place\n\nI thought that I could give everybody a dream\nAnd change the whole bloody world with a song and scream\nBut i didn't want to be your Jesus, that's not my scene\n\nBut one fine day, I through it all away\nI turned on a Cuban heel and walked out of there\nOne fine day, I threw it all away\nNow there's no money in my pocket and my cupboard is always bare\n\nWinston O'Boogie!"
+            }
+          },
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 1758876018
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H02M18S',
+          '@id': 'https://martincarr.bandcamp.com/track/one-fine-day'
+        },
+        position: 1
+      },
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: 'Crazy Faces',
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              '@type': 'CreativeWork',
+              text: "Julia and Fred\nBreaking the bed\nFucking with my head\n\nI hope you're ready for my reputation \nand my\nCrazy faces and my flames\n\nJulia and Fred\nI'm sick in the head\nWish that I was dead\n\nI hope you're ready for my discrimination\nand my\nCrazy faces and my flames\n\nThey fucked me up, my mum and dad."
+            }
+          },
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 3449501697
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H02M30S',
+          '@id': 'https://martincarr.bandcamp.com/track/crazy-faces'
+        },
+        position: 2
+      },
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: "I'm Alright",
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              '@type': 'CreativeWork',
+              text: "Move on world\nI got nothing\nYou see I threw it all away\nNow there's no money for the bus home\n\nOh, I know that I have wasted many hours\nStill the mountain top is out of reach\n\nBut I'm alright, I'm still free\nI'm alright I'm still me\nI'm alright"
+            }
+          },
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 4099652968
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H02M29S',
+          '@id': 'https://martincarr.bandcamp.com/track/im-alright'
+        },
+        position: 3
+      },
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: 'Cal',
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              '@type': 'CreativeWork',
+              text: "Cal\nAm I dreaming?\nI don't remember who I'm supposed to be\nCal\nDo you know how I feel about you?\n\nCal\nWhy can't I be happy?\nEven the simple things are hard to do\nCal\nThere's a place in this world for you\nAnd me\n\nAnd though the years run away from me\nThe days suck the life out of my bones\nBut the way you look at me\nIt knocks me right over"
+            }
+          },
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 2042390591
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H02M50S',
+          '@id': 'https://martincarr.bandcamp.com/track/cal'
+        },
+        position: 4
+      },
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: 'Easy Come, Easy Go',
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              '@type': 'CreativeWork',
+              text: "I dreamed a dream\nMy dreams came true\nWhen I awoke my dreams were through\nEasy come, easy go\n\nI had a girl\nWe had a son\nI ran as fast as I could run\nEasy come, easy go\n\nHail! Hail! Rock 'n' Roll\nI took my ball and I went home\nEasy come, easy go\n\nMy mother got hit \nBy a copper's car\nDied on the street\nOn her own, in the dark \nEasy come\nEasy go"
+            }
+          },
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 394962485
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H01M02S',
+          '@id': 'https://martincarr.bandcamp.com/track/easy-come-easy-go'
+        },
+        position: 5
+      },
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: 'World In Action',
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 4012018791
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H04M21S',
+          '@id': 'https://martincarr.bandcamp.com/track/world-in-action'
+        },
+        position: 6
+      },
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: 'The Years Roll Down My Face',
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 387842
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H02M40S',
+          '@id': 'https://martincarr.bandcamp.com/track/the-years-roll-down-my-face'
+        },
+        position: 7
+      },
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: 'Jack Jones',
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              '@type': 'CreativeWork',
+              text: "Jack Jones\nHow did I sink so low?\nAll on my Jack Jones\nWhere did everybody go?\nI used to believe\nBut I was deceived\nNow it's just me and the stranger in the mirror\nIf you want to know why\nI hardly smile\nWell I'm a glass is always half smashed kind of guy\nYou can carve that on my headstone\n\nI \nNo matter how hard I try\nTo fit with the world outsiude\nI always end up\nBack in my room on my\nJack Jones\n\nI'm on my Jack Jones\nhigh up in my favourite tree\nAll on my Jack Jones\nWhere can everybody be?\nThe people below\nLook at them go\nAlways fighting over one thing or another\nLost in the fog\nGone to the dogs\nThis country's so far right\nI fall out of bed at n ight\n\nI \nNo matter how hard I try\nTo fit with the world outsiude\nI always end up\nBack in my room on my\nJack Jones"
+            }
+          },
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 4186958412
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H03M21S',
+          '@id': 'https://martincarr.bandcamp.com/track/jack-jones'
+        },
+        position: 8
+      },
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: 'Only You Can See Me',
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              '@type': 'CreativeWork',
+              text: "If you believe in nothing\nThen you'll believe in anything\nI believe in a supreme being\nI believe it's you\n\nThe sun cannot find me\nOn the brightest of days\nNo shadow\nNo footprints\nNo reflection I make\n\nOnly you can see me\n\nLook at me\nI'm a fog to my family\nI'm a ghost to my friends\nI'm like a blur to myself\n\nThe sun cannot find me\nOn the brightest of days\nNo shadow\nNo footprints\nNo reflection I make\n\nOnly you can see me"
+            }
+          },
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 1773566755
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H03M50S',
+          '@id': 'https://martincarr.bandcamp.com/track/only-you-can-see-me'
+        },
+        position: 9
+      },
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: 'Land of the Living',
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              '@type': 'CreativeWork',
+              text: "Now I'm back \nIn the land of the living\nI will not stumble\nI will not fall\nNow I'm back\nIn the land of the living\nI shall not be humble\nI shall not kneel\n\nYour number one\nprodigal son \nis here\nAnd I'll take you all \nfrom the wigwam\ndown to the pier\n\n'Cos now I'm back \nIn the land of the living\nI will not stumble\nI will not fall\nNow I'm back\nIn the land of the living\nI shall not be humble\nI shall not yield\n\nThe rain anoints\nThe sun appoints\nMy crown\nThe bells ring\nYour returning king's\nYome town\n\nNow I'm back \nIn the land of the living\nI will not stumble\nI will not fall\nNow I'm back\nIn the land of the living\nI shall not be humble\nI shall not kneel"
+            }
+          },
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 463301619
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H04M24S',
+          '@id': 'https://martincarr.bandcamp.com/track/land-of-the-living'
+        },
+        position: 10
+      },
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: 'Snodgrass',
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              '@type': 'CreativeWork',
+              text: "Hey, man\nYou look a lot like Snodgrass\nDon't even try to understand\nHey, man\nYou talk a lot like Snodgrass\nDon't even try to understand\n\nNine to five\nthe long slow turn of the knife\nBoring people with their boring lives\nkettle on\nThe office clock sits on its hands\nWhat are you looking at?\nWhat do you want from me, Snodgrass?\n\nYou look a lot like Snodgrass"
+            }
+          },
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 2922051215
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H02M10S',
+          '@id': 'https://martincarr.bandcamp.com/track/snodgrass'
+        },
+        position: 11
+      },
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: 'The Years Roll Down My Face (Easy Come, Easy Go) Reprise',
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              '@type': 'CreativeWork',
+              text: "The years roll down my face\nI can't even try to trace them\nThe years roll down my face\nOh, I know how I have wasted them\n\nEasy come, easy go"
+            }
+          },
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 2081958901
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H01M01S',
+          '@id': 'https://martincarr.bandcamp.com/track/the-years-roll-down-my-face-easy-come-easy-go-reprise'
+        },
+        position: 12
+      },
+      {
+        '@type': 'ListItem',
+        item: {
+          '@type': 'MusicRecording',
+          name: 'Your Body',
+          recordingOf: {
+            '@type': 'MusicComposition',
+            lyrics: {
+              '@type': 'CreativeWork',
+              text: "Your body trembles \nBeneath your dress\nThe cold wind blows up from the Mersey\nYour life's arranged\nMine's a mess\nWe fumble blindly \nIn an alley\n\nWhere can we go?\nWhere can we go?\nWhere others can't find\nWhere can we go?\nWhere can we go?\nWhere others can't find us\n\nYour mother cries\nAnd paints her nails\nYour father hides \nWithin his shadows\nYour brother runs\nWithout a word\nAnd leaves you\ndrowning in the suburbs\n\nWhere can we go?\nWhere can we go?\nWhere others can't find\nWhere can we go?\nWhere can we go?\nWhere others can't find us"
+            }
+          },
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'track_id',
+              value: 1275060554
+            },
+            {
+              '@type': 'PropertyValue',
+              name: 'license_name',
+              value: 'all_rights_reserved'
+            }
+          ],
+          copyrightNotice: 'All Rights Reserved',
+          duration: 'P00H03M49S',
+          '@id': 'https://martincarr.bandcamp.com/track/your-body'
+        },
+        position: 13
+      }
+    ]
+  },
+  publisher: {
+    '@type': 'MusicGroup',
+    name: 'Martin Carr',
+    description: 'Martin Carr.\nThe Black Serpent Choir.\nbravecaptain\nWhat Future',
+    event: [
+      {
+        '@type': 'MusicEvent',
+        name: 'Martin Carr',
+        startDate: '14 May 2022 00:00:00 GMT',
+        url: 'https://www.songkick.com/concerts/39819705-charlatans-at-rock-city?utm_source=1471&utm_medium=partner',
+        location: {
+          '@type': 'MusicVenue',
+          name: 'Rock City',
+          address: 'Nottingham, UK'
+        }
+      },
+      {
+        '@type': 'MusicEvent',
+        name: 'Martin Carr',
+        startDate: '15 May 2022 00:00:00 GMT',
+        url: 'https://www.songkick.com/concerts/39820181-charlatans-at-o2-academy-leeds?utm_source=1471&utm_medium=partner',
+        location: {
+          '@type': 'MusicVenue',
+          name: 'O2 Academy Leeds',
+          address: 'Leeds, UK'
+        }
+      }
+    ],
+    additionalProperty: [
+      {
+        '@type': 'PropertyValue',
+        name: 'band_id',
+        value: 4100826536
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'currency',
+        value: 'GBP'
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'has_any_downloads',
+        value: true
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'has_download_codes',
+        value: true
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'image_height',
+        value: 4032
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'image_id',
+        value: 26793594
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'image_width',
+        value: 3024
+      }
+    ],
+    genre: 'https://bandcamp.com/tag/pop',
+    mainEntityOfPage: [
+      {
+        '@type': 'WebPage',
+        name: 'Twitter',
+        url: 'https://twitter.com/#!/Martin_Carr'
+      }
+    ],
+    foundingLocation: {
+      '@type': 'Place',
+      name: 'Cardiff, UK'
+    },
+    '@id': 'https://martincarr.bandcamp.com',
+    subjectOf: [
+      {
+        '@type': 'WebPage',
+        name: 'music',
+        additionalProperty: [
+          {
+            '@type': 'PropertyValue',
+            name: 'nav_type',
+            value: 'm'
+          }
+        ],
+        url: 'https://martincarr.bandcamp.com/music'
+      },
+      {
+        '@type': 'WebPage',
+        name: 'merch',
+        additionalProperty: [
+          {
+            '@type': 'PropertyValue',
+            name: 'nav_type',
+            value: 'p'
+          }
+        ],
+        url: 'https://martincarr.bandcamp.com/merch'
+      },
+      {
+        '@type': 'WebPage',
+        name: 'video',
+        additionalProperty: [
+          {
+            '@type': 'PropertyValue',
+            name: 'nav_type',
+            value: 'v'
+          }
+        ],
+        url: 'https://martincarr.bandcamp.com/video'
+      },
+      {
+        '@type': 'WebPage',
+        name: 'newshapes',
+        additionalProperty: [
+          {
+            '@type': 'PropertyValue',
+            name: 'nav_type',
+            value: 'c'
+          }
+        ],
+        url: 'https://martincarr.bandcamp.com/newshapes'
+      }
+    ],
+    image: 'https://f4.bcbits.com/img/0026793594_10.jpg'
+  },
+  additionalProperty: [
+    {
+      '@type': 'PropertyValue',
+      name: 'art_id',
+      value: 1031227022
+    },
+    {
+      '@type': 'PropertyValue',
+      name: 'featured_track_num',
+      value: 1
+    },
+    {
+      '@type': 'PropertyValue',
+      name: 'license_name',
+      value: 'all_rights_reserved'
+    }
+  ],
+  sponsor: [
+    // omitted
+  ]
+}

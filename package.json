@@ -4,17 +4,21 @@
   "description": "bookmarklets",
   "license": "ISC",
   "engines": {
-    "pnpm": ">= 6"
+    "pnpm": ">=6"
   },
+  "type": "module",
   "scripts": {
     "lint": "eslint 'src/**/*.js'",
     "format": "prettier --write 'src/**/*.js'",
-    "build": "node ./src/compileToBookmarklet.mjs"
+    "build": "node ./src/compileToBookmarklet.mjs",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --watch"
   },
   "devDependencies": {
+    "@types/jest": "^29.1.1",
     "eslint": "^8.15.0",
-    "eslint-config-esnext": "^4.1.0",
     "google-closure-compiler": "^20220502.0.0",
+    "jest": "^29.1.2",
+    "jsdom": "^20.0.0",
     "prettier": "^2.6.2"
   }
 }
