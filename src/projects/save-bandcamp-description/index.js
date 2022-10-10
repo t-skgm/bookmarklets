@@ -34,6 +34,8 @@
 
     const tracks = ld.track.itemListElement.map(el => `${el.position}. ${el.item.name}`);
 
+    const hasLyrics = document.querySelector('.lyricsRow') != null;
+
     const buildPublisherText = pb => {
       let _t = `[name]\n${pb.name}`;
 
@@ -74,32 +76,42 @@
       publisherText: buildPublisherText(ld.publisher)
     };
 
+    const inpageLyrics = Array.from(document.querySelectorAll('.lyricsRow')).map(row => {
+      const tr = Number(row.id.replace('lyrics_row_', ''));
+      const ly = row.textContent.trim();
+      return `${tracks[tr - 1]}\n${ly}`;
+    });
+
     // prettier-ignore
-    const albumBody =
-    d.artist + '\n' +
-    d.title + '\n' +
-    d.url + '\n' +
-    '\n' +
-    '<Track list>\n' +
-    d.trackList + '\n' +
-    '\n' +
-    '<Description>\n' +
-    d.description  + '\n' +
-    '\n' +
-    '<Credits>\n' +
-    d.credits  + '\n' +
-    '\n' +
-    '<Published>\n' +
-    d.published  + '\n' +
-    '\n' +
-    '<Lisence>\n' +
-    d.lisence  + '\n' +
-    '\n' +
-    '<Tags>\n' +
-    d.tags +  '\n' +
-    '\n' +
-    '<Publisher>' + '\n' +
-    d.publisherText;
+    let albumBody =
+      d.artist + '\n' +
+      d.title + '\n' +
+      d.url + '\n' +
+      '\n' +
+      '<Track list>\n' +
+      d.trackList + '\n' +
+      '\n' +
+      '<Description>\n' +
+      d.description  + '\n' +
+      '\n' +
+      '<Credits>\n' +
+      d.credits  + '\n' +
+      '\n' +
+      '<Published>\n' +
+      d.published  + '\n' +
+      '\n' +
+      '<Lisence>\n' +
+      d.lisence  + '\n' +
+      '\n' +
+      '<Tags>\n' +
+      d.tags +  '\n' +
+      '\n' +
+      '<Publisher>' + '\n' +
+      d.publisherText;
+
+    if (hasLyrics) {
+      albumBody = albumBody + '\n\n' + '<Lyrics (In-page)>\n' + inpageLyrics.join('\n\n');
+    }
 
     downloadTextFile(albumBody, `${d.artist} - ${d.title}.txt`);
 

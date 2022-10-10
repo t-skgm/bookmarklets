@@ -3,7 +3,7 @@ import { JSDOM } from 'jsdom';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 // import { setTimeout } from 'timers/promises';
-import { buildHtmlWithJsonLd, getDirname, mockedFetchFn } from '../../../test/utils';
+import { buildHtmlWithJsonLd, getDirname, mockedFetchFn } from '../../../../test/utils';
 
 const readStubHtml = filename =>
   readFileSync(resolve(getDirname(import.meta.url), './__stub__/', filename), {
@@ -11,8 +11,8 @@ const readStubHtml = filename =>
   });
 
 describe('save-bandcamp-description', () => {
-  describe('Album page B (without tags, location)', () => {
-    const albumHtmlB = readStubHtml('bandcamp_album_b.html');
+  describe('Album page C (with in-page lyrics)', () => {
+    const albumHtmlC = readStubHtml('bandcamp_album_c.html');
 
     /** @type {JSDOM} */
     let dom;
@@ -23,7 +23,7 @@ describe('save-bandcamp-description', () => {
 
     beforeAll(() => {
       // init window/document with jsdom
-      dom = new JSDOM(albumHtmlB);
+      dom = new JSDOM(albumHtmlC);
       global.document = document = dom.window.document;
       global.window = window = dom.window;
       global.DOMParser = dom.window.DOMParser;
@@ -34,7 +34,7 @@ describe('save-bandcamp-description', () => {
 
     test('test jsdom mocking', async () => {
       const documentTitle = document.querySelector('title').textContent;
-      expect(documentTitle).toMatchInlineSnapshot(`"The Warehouse Demos | Blewett"`);
+      expect(documentTitle).toMatchInlineSnapshot(`"Mémorial | Erevan"`);
     });
 
     describe('execute script', () => {
@@ -47,19 +47,25 @@ describe('save-bandcamp-description', () => {
         createObjectURLSpy = jest.spyOn(global.URL, 'createObjectURL');
 
         // execute script
-        await import('./index');
+        await import('../index');
       });
 
       test('alert never to be called', () => {
         expect(global.alert).not.toBeCalled();
       });
 
-      test('download file (click link) has fired 1 times', () => {
-        expect(linkClickSpy).toBeCalledTimes(1);
+      test('download file (click link) has fired 2 times (album info and track info)', () => {
+        expect(linkClickSpy).toBeCalledTimes(2);
       });
 
       test('generated album info text', () => {
         const textData = createObjectURLSpy.mock.calls[0][0].blobParts[0];
+
+        expect(textData).toMatchSnapshot();
+      });
+
+      test('generated track info text', () => {
+        const textData = createObjectURLSpy.mock.calls[1][0].blobParts[0];
 
         expect(textData).toMatchSnapshot();
       });

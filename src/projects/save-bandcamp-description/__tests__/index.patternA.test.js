@@ -3,7 +3,7 @@ import { JSDOM } from 'jsdom';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 // import { setTimeout } from 'timers/promises';
-import { buildHtmlWithJsonLd, getDirname, mockedFetchFn } from '../../../test/utils';
+import { buildHtmlWithJsonLd, getDirname, mockedFetchFn } from '../../../../test/utils';
 
 const readStubHtml = filename =>
   readFileSync(resolve(getDirname(import.meta.url), './__stub__/', filename), {
@@ -47,7 +47,7 @@ describe('save-bandcamp-description', () => {
         createObjectURLSpy = jest.spyOn(global.URL, 'createObjectURL');
 
         // execute script
-        await import('./index');
+        await import('../index');
       });
 
       test('alert never to be called', () => {
