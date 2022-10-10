@@ -34,14 +34,32 @@
 
     const tracks = ld.track.itemListElement.map(el => `${el.position}. ${el.item.name}`);
 
-    const buildPublisherText = pb =>
-      `[name]\n${pb.name}\n\n` +
-      `[location]\n${pb.foundingLocation.name}\n\n` +
-      '[description]\n' +
-      pb.description +
-      '\n\n' +
-      '[website]\n' +
-      pb.mainEntityOfPage.map(p => `* ${p.name} (${p.url})\n`);
+    const buildPublisherText = pb => {
+      let _t = `[name]\n${pb.name}`;
+
+      if (pb.foundingLocation) {
+        // prettier-ignore
+        _t = _t + '\n\n' +
+          '[location]\n' +
+          `${pb.foundingLocation.name}`;
+      }
+
+      if (pb.description) {
+        // prettier-ignore
+        _t = _t + '\n\n' +
+          '[description]\n' +
+          pb.description;
+      }
+
+      if (pb.mainEntityOfPage) {
+        // prettier-ignore
+        _t = _t + '\n\n' +
+          '[website]\n' +
+          pb.mainEntityOfPage.map(p => `* ${p.name} (${p.url})\n`);
+      }
+
+      return _t;
+    };
 
     const d = {
       artist: ld.byArtist.name,
@@ -52,7 +70,7 @@
       credits: ld.creditText ?? '-',
       published: parseDate(ld.datePublished),
       lisence: ld.copyrightNotice ?? '-',
-      tags: ld.keywords.join(', ') ?? '-',
+      tags: ld.keywords ? ld.keywords.join(', ') ?? '-' : '-',
       publisherText: buildPublisherText(ld.publisher)
     };
 

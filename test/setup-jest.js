@@ -18,3 +18,8 @@ class MockURL {
 global.alert = jest.fn();
 global.Blob = MockBlob;
 global.URL = MockURL;
+
+global.location = {
+  origin: 'https://example.com',
+  host: 'example.com'
+};
