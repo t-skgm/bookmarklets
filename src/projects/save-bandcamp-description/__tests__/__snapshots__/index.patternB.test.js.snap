@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`save-bandcamp-description Album page B (without tags, location) execute script generated album info text 1`] = `
+"Blewett
+The Warehouse Demos
+https://blewett.bandcamp.com/album/the-warehouse-demos
+
+<Track list>
+1. So You Say
+2. Child Asthma
+3. Across State Senate
+4. On The Back Burner
+5. Allegro
+6. Right Handed
+
+<Description>
+Recorded in an abandoned coffin factory in Fond du Lac, WI between 11/2002 & 2/2003.
+
+<Credits>
+Matt Duel - Guitar/Vocals
+Justin Kibbel - Bass
+Kevin Duel - Drums
+
+Sean Wilke - screams on "On The Back Burner"
+
+<Published>
+2003-02-02
+
+<Lisence>
+Attribution Non Commercial No Derivatives
+
+<Tags>
+-
+
+<Publisher>
+[name]
+Blewett"
+`;
