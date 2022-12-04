@@ -10,9 +10,9 @@ const readStubHtml = filename =>
     encoding: 'utf8'
   });
 
-describe('save-bandcamp-description', () => {
-  describe('Album page C (with in-page lyrics)', () => {
-    const albumHtmlC = readStubHtml('bandcamp_album_c.html');
+describe('download-bandcamp-description', () => {
+  describe('Album page A (with Track info)', () => {
+    const albumHtmlA = readStubHtml('bandcamp_album_a.html');
 
     /** @type {JSDOM} */
     let dom;
@@ -23,7 +23,7 @@ describe('save-bandcamp-description', () => {
 
     beforeAll(() => {
       // init window/document with jsdom
-      dom = new JSDOM(albumHtmlC);
+      dom = new JSDOM(albumHtmlA);
       global.document = document = dom.window.document;
       global.window = window = dom.window;
       global.DOMParser = dom.window.DOMParser;
@@ -34,7 +34,7 @@ describe('save-bandcamp-description', () => {
 
     test('test jsdom mocking', async () => {
       const documentTitle = document.querySelector('title').textContent;
-      expect(documentTitle).toMatchInlineSnapshot(`"Mémorial | Erevan"`);
+      expect(documentTitle).toMatchInlineSnapshot(`"Crazy Faces (Songs For Snod (2012-2019)) | Martin Carr"`);
     });
 
     describe('execute script', () => {

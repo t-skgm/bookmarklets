@@ -10,7 +10,7 @@ const readStubHtml = filename =>
     encoding: 'utf8'
   });
 
-describe('save-bandcamp-description', () => {
+describe('download-bandcamp-description', () => {
   describe('Album page B (without tags, location)', () => {
     const albumHtmlB = readStubHtml('bandcamp_album_b.html');
 

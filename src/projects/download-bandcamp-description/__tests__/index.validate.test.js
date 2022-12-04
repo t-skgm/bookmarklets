@@ -10,7 +10,7 @@ const readStubHtml = filename =>
     encoding: 'utf8'
   });
 
-describe('save-bandcamp-description', () => {
+describe('download-bandcamp-description', () => {
   describe('With invalil html (which has no generator=Bandcamp meta tag)', () => {
     const notBandcampHtml = readStubHtml('not_bandcamp_page.html');
 
