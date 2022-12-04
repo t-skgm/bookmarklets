@@ -11,6 +11,29 @@ const configs = {
   projectsDir: './src/projects/'
 };
 
+const toScriptHtmlStr = scripts => `<html>
+<head><title>Bookmarklets</title></head>
+<body>
+<h1>Bookmarklets</h1>
+<p>使いたいBookmarkletをブックマークバーにドラッグ</p>
+<ul>
+${scripts.map(
+  script => `  <li>
+    <a href="${encodeURI(script.compiled)}">
+      ${kebabToNormal(script.id)}
+    </a>
+  </li>`
+)}
+</ul>
+</body>
+</html>
+`;
+
+const kebabToNormal = str => {
+  const spaced = str.split('-').join(' ');
+  return spaced.charAt(0).toUpperCase() + spaced.slice(1);
+};
+
 const compile = async projectId => {
   const compiler = new Compiler({
     js: `${configs.projectsDir}${projectId}/index.js`,
@@ -41,17 +64,8 @@ fs.readdir(configs.projectsDir, (_err, projectIds) => {
       return { id, compiled };
     })
   ).then(scripts => {
-    const markletsHtml = `<html>
-<head><title>Bookmarklets</title></head>
-<body>
-<h1>Bookmarklets</h1>
-<p>使いたいBookmarkletをブックマークバーにドラッグ</p>
-<ul>
-${scripts.map(script => `<li><a href="${encodeURI(script.compiled)}">${script.id}</a></li>`)}
-</ul>
-</body>
-</html>`;
-    fs.writeFileSync(configs.htmlPath, markletsHtml, { encoding: 'utf8' });
+    const htmlStr = toScriptHtmlStr(scripts);
+    fs.writeFileSync(configs.htmlPath, htmlStr, { encoding: 'utf8' });
 
     console.log('done!', scripts);
   });

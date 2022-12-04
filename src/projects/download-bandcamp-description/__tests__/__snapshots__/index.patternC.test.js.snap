@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`save-bandcamp-description Album page C (with in-page lyrics) execute script generated album info text 1`] = `
+exports[`download-bandcamp-description Album page C (with in-page lyrics) execute script generated album info text 1`] = `
 "Erevan
 Mémorial
 https://erevanpunx.bandcamp.com/album/m-morial
@@ -88,7 +88,7 @@ Ce soir, c'est relâche. Je ne jouerai pas devant vous, ce soir c'est relâche, 
 Ils-elles nous observent du haut de la pyramide. Ils-elles observent, impassibles mais inquiet-e-s, sachant leur fin proche, en voyant la base perdre sa solidarité. Un spectre vient chaque nuit leur annoncer l'avènement d'une société linéaire où ils-elles ne seraient rien, rien de plus que les autres. Ils-elles n'entendent que le "rien", ce mot qui résonne et fait trembler leurs lèvres. On les observe du bas de la pyramide, on observe, affairé-e-s, mais confiant-e-s. Sachant l'ascension impossible, nous travaillons à la formation de la ligne par la destruction de la base de cette maudite pyramide qui jadis nous narguait. Et chaque pierre enlevée représente leur chute."
 `;
 
-exports[`save-bandcamp-description Album page C (with in-page lyrics) execute script generated track info text 1`] = `
+exports[`download-bandcamp-description Album page C (with in-page lyrics) execute script generated track info text 1`] = `
 "Erevan - Mémorial
 
 1. Céleste

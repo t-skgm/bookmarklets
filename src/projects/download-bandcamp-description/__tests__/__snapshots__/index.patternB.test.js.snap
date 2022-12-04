@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`save-bandcamp-description Album page B (without tags, location) execute script generated album info text 1`] = `
+exports[`download-bandcamp-description Album page B (without tags, location) execute script generated album info text 1`] = `
 "Blewett
 The Warehouse Demos
 https://blewett.bandcamp.com/album/the-warehouse-demos

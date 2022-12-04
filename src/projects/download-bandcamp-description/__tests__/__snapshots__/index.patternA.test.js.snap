@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`save-bandcamp-description Album page A (with Track info) execute script generated album info text 1`] = `
+exports[`download-bandcamp-description Album page A (with Track info) execute script generated album info text 1`] = `
 "Martin Carr
 Crazy Faces (Songs For Snod (2012-2019))
 https://martincarr.bandcamp.com/album/crazy-faces-songs-for-snod-2012-2019
@@ -324,7 +324,7 @@ Where can we go?
 Where others can't find us"
 `;
 
-exports[`save-bandcamp-description Album page A (with Track info) execute script generated track info text 1`] = `
+exports[`download-bandcamp-description Album page A (with Track info) execute script generated track info text 1`] = `
 "Martin Carr - Crazy Faces (Songs For Snod (2012-2019))
 
 1. One Fine Day
