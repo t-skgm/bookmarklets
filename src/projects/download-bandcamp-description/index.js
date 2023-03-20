@@ -58,7 +58,7 @@
         // prettier-ignore
         _t = _t + '\n\n' +
           '[website]\n' +
-          pb.mainEntityOfPage.map(p => `* ${p.name} (${p.url})\n`);
+          pb.mainEntityOfPage.map(p => `* ${p.name} (${p.url})`).join('\n');
       }
 
       return _t;
