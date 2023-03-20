@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`download-bandcamp-description Signle page execute script generated info text 1`] = `
+"Between Rooms
+Fall
+https://betweenrooms.bandcamp.com/track/fall
+
+<Description>
+A song about the change in season to come.
+
+<Credits>
+All songwriting credits/copyrights belong to the members of Between Rooms
+
+<Lyrics>
+The sun sets,
+Over the trees,
+The bare naked branches,
+Cast their shadows over me.
+
+<Published>
+2021-10-04
+
+<Lisence>
+All Rights Reserved
+
+<Publisher>
+[name]
+Between Rooms
+
+[location]
+New Jersey
+
+[description]
+Between Rooms is a post hardcore band from NJ."
+`;

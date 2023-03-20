@@ -1,0 +1,209 @@
+{
+  "@type": "MusicRecording",
+  "@id": "https://betweenrooms.bandcamp.com/track/fall",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "track_id",
+      "value": 3095546898
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "art_id",
+      "value": 4003180343
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "license_name",
+      "value": "all_rights_reserved"
+    }
+  ],
+  "name": "Fall",
+  "description": "A song about the change in season to come.",
+  "creditText": "All songwriting credits/copyrights belong to the members of Between Rooms",
+  "duration": "P00H02M31S",
+  "dateModified": "04 Oct 2021 17:45:52 GMT",
+  "datePublished": "04 Oct 2021 17:45:52 GMT",
+  "inAlbum": {
+    "@type": "MusicAlbum",
+    "name": "Fall",
+    "albumRelease": [
+      {
+        "@type": ["MusicRelease", "Product"],
+        "@id": "https://betweenrooms.bandcamp.com/track/fall",
+        "name": "Fall",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "item_id",
+            "value": 3095546898
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "item_type",
+            "value": "t"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "selling_band_id",
+            "value": 2168393087
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "type_name",
+            "value": "Digital"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "art_id",
+            "value": 4003180343
+          }
+        ],
+        "description": "Includes high-quality download in MP3, FLAC and more. Paying supporters also get unlimited streaming via the free Bandcamp app.",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://betweenrooms.bandcamp.com/track/fall#t3095546898-buy",
+          "priceCurrency": "USD",
+          "price": 0.0,
+          "priceSpecification": {
+            "minPrice": 0.0
+          },
+          "availability": "OnlineOnly"
+        },
+        "musicReleaseFormat": "DigitalFormat",
+        "image": ["https://f4.bcbits.com/img/a4003180343_10.jpg"]
+      }
+    ],
+    "albumReleaseType": "SingleRelease",
+    "numTracks": 1
+  },
+  "byArtist": {
+    "@type": "MusicGroup",
+    "name": "Between Rooms",
+    "@id": "https://betweenrooms.bandcamp.com"
+  },
+  "publisher": {
+    "@type": "MusicGroup",
+    "@id": "https://betweenrooms.bandcamp.com",
+    "name": "Between Rooms",
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "band_id",
+        "value": 2168393087
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "has_any_downloads",
+        "value": true
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "image_height",
+        "value": 1555
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "image_id",
+        "value": 26477027
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "image_width",
+        "value": 1584
+      }
+    ],
+    "image": "https://f4.bcbits.com/img/0026477027_10.jpg",
+    "genre": "https://bandcamp.com/tag/rock",
+    "description": "Between Rooms is a post hardcore band from NJ.",
+    "subjectOf": [
+      {
+        "@type": "WebPage",
+        "url": "https://betweenrooms.bandcamp.com/music",
+        "name": "music",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "nav_type",
+            "value": "m"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "url": "https://betweenrooms.bandcamp.com/community",
+        "name": "community",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "nav_type",
+            "value": "c"
+          }
+        ]
+      }
+    ],
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "New Jersey"
+    }
+  },
+  "copyrightNotice": "All Rights Reserved",
+  "recordingOf": {
+    "@type": "MusicComposition",
+    "lyrics": {
+      "@type": "CreativeWork",
+      "text": "The sun sets,\nOver the trees,\nThe bare naked branches,\nCast their shadows over me."
+    }
+  },
+  "comment": [
+    {
+      "@type": "Comment",
+      "author": {
+        "@type": "Person",
+        "url": "https://bandcamp.com/4010",
+        "image": "https://f4.bcbits.com/img/0010959858_50.jpg",
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "image_id",
+            "value": 10959858
+          }
+        ],
+        "name": "4010"
+      },
+      "text": ["Real midwest emo is still out there, just waiting to be found."]
+    }
+  ],
+  "keywords": ["Rock", "emo", "emocore", "post-hardcore", "New Jersey"],
+  "image": "https://f4.bcbits.com/img/a4003180343_10.jpg",
+  "sponsor": [
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/martinsear",
+      "image": "https://f4.bcbits.com/img/0005770197_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 5770197
+        }
+      ],
+      "name": "martin sear"
+    },
+    {
+      "@type": "Person",
+      "url": "https://bandcamp.com/ambientsketchbook",
+      "image": "https://f4.bcbits.com/img/0001090957_50.jpg",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "image_id",
+          "value": 1090957
+        }
+      ],
+      "name": "Lee Gorman"
+    }
+  ],
+  "mainEntityOfPage": "https://betweenrooms.bandcamp.com/track/fall",
+  "@context": "https://schema.org"
+}

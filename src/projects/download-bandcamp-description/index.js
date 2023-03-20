@@ -37,13 +37,6 @@
 
     // Album description //
 
-    const ldStr = document.querySelector('script[type="application/ld+json"]').textContent;
-    const ld = JSON.parse(ldStr);
-
-    const tracks = ld.track.itemListElement.map(el => `${el.position}. ${el.item.name}`);
-
-    const hasLyrics = document.querySelector('.lyricsRow') != null;
-
     const buildPublisherText = pb => {
       let _t = `[name]\n${pb.name}`;
 
@@ -71,95 +64,160 @@
       return _t;
     };
 
-    const d = {
-      artist: ld.byArtist.name,
-      title: ld.name,
-      url: ld['@id'],
-      trackList: tracks.join('\n') ?? '-',
-      description: ld.description ?? '-',
-      credits: ld.creditText ?? '-',
-      published: parseDate(ld.datePublished),
-      lisence: ld.copyrightNotice ?? '-',
-      tags: ld.keywords ? ld.keywords.join(', ') ?? '-' : '-',
-      publisherText: buildPublisherText(ld.publisher)
-    };
+    const ldStr = document.querySelector('script[type="application/ld+json"]').textContent;
+    const ld = JSON.parse(ldStr);
 
-    const inpageLyrics = Array.from(document.querySelectorAll('.lyricsRow')).map(row => {
-      const tr = Number(row.id.replace('lyrics_row_', ''));
-      const ly = row.textContent.trim();
-      return `${tracks[tr - 1]}\n${ly}`;
-    });
+    const isAlbum = ld.albumReleaseType != null;
 
-    // prettier-ignore
-    let albumBody =
-      d.artist + '\n' +
-      d.title + '\n' +
-      d.url + '\n' +
-      '\n' +
-      '<Track list>\n' +
-      d.trackList + '\n' +
-      '\n' +
-      '<Description>\n' +
-      d.description  + '\n' +
-      '\n' +
-      '<Credits>\n' +
-      d.credits  + '\n' +
-      '\n' +
-      '<Published>\n' +
-      d.published  + '\n' +
-      '\n' +
-      '<Lisence>\n' +
-      d.lisence  + '\n' +
-      '\n' +
-      '<Tags>\n' +
-      d.tags +  '\n' +
-      '\n' +
-      '<Publisher>' + '\n' +
-      d.publisherText;
+    if (isAlbum) {
+      const tracks = ld.track.itemListElement.map(el => `${el.position}. ${el.item.name}`);
 
-    if (hasLyrics) {
-      albumBody = albumBody + '\n\n' + '<Lyrics (In-page)>\n' + inpageLyrics.join('\n\n');
-    }
+      const d = {
+        artist: ld.byArtist.name,
+        title: ld.name,
+        url: ld['@id'],
+        trackList: tracks.join('\n') ?? '-',
+        description: ld.description ?? '-',
+        credits: ld.creditText ?? '-',
+        published: parseDate(ld.datePublished),
+        lisence: ld.copyrightNotice ?? '-',
+        tags: ld.keywords ? ld.keywords.join(', ') ?? '-' : '-',
+        publisherText: buildPublisherText(ld.publisher)
+      };
 
-    downloadTextFile(albumBody, `${d.artist} - ${d.title}.txt`);
+      const inpageLyrics = Array.from(document.querySelectorAll('.lyricsRow')).map(row => {
+        const tr = Number(row.id.replace('lyrics_row_', ''));
+        const ly = row.textContent.trim();
+        return `${tracks[tr - 1]}\n${ly}`;
+      });
 
-    // Track description //
+      // prettier-ignore
+      let albumBody =
+        d.artist + '\n' +
+        d.title + '\n' +
+        d.url + '\n' +
+        '\n' +
+        '<Track list>\n' +
+        d.trackList + '\n' +
+        '\n' +
+        '<Description>\n' +
+        d.description  + '\n' +
+        '\n' +
+        '<Credits>\n' +
+        d.credits  + '\n' +
+        '\n' +
+        '<Published>\n' +
+        d.published  + '\n' +
+        '\n' +
+        '<Lisence>\n' +
+        d.lisence  + '\n' +
+        '\n' +
+        '<Tags>\n' +
+        d.tags +  '\n' +
+        '\n' +
+        '<Publisher>' + '\n' +
+        d.publisherText;
 
-    const lyricsList = ld.track.itemListElement.map(el => ({
-      url: el.item['@id'],
-      title: `${el.position}. ${el.item.name}`,
-      lyrics: get(el, 'item.recordingOf.lyrics.text')
-    }));
-    const trackInfoList = document.querySelectorAll('.info_link');
-    const urlsToSongsThatHasInfo = Array.from(trackInfoList)
-      .filter(info => info.textContent.includes('info'))
-      .map(info => `${location.origin}${info.querySelector('a').getAttribute('href')}`);
+      const hasLyrics = document.querySelector('.lyricsRow') != null;
+      if (hasLyrics) {
+        albumBody = albumBody + '\n\n' + '<Lyrics (In-page)>\n' + inpageLyrics.join('\n\n');
+      }
 
-    const hasLyricsOrInfo = lyricsList.some(i => i.lyrics !== undefined) || urlsToSongsThatHasInfo.length !== 0;
-    if (hasLyricsOrInfo) {
-      console.log("[marklet] this album has some track info. let's download it");
-      const trackTexts = await Promise.all(
-        lyricsList.map(async i => {
-          let text = i.title + '\n';
+      downloadTextFile(albumBody, `${d.artist} - ${d.title}.txt`);
 
-          // Infoがある曲
-          if (urlsToSongsThatHasInfo.includes(i.url)) {
-            const trackLd = await fetchJsonLd(i.url);
-            const info = trackLd.description;
-            const credit = trackLd.creditText;
-            if (info) text += '<Description>\n' + info + '\n';
-            if (credit) text += '<Credit>\n' + credit + '\n';
-          }
+      // Track description //
 
-          if (i.lyrics) text += '<Lyrics>\n' + i.lyrics;
+      const lyricsList = ld.track.itemListElement.map(el => ({
+        url: el.item['@id'],
+        title: `${el.position}. ${el.item.name}`,
+        lyrics: get(el, 'item.recordingOf.lyrics.text')
+      }));
+      const trackInfoList = document.querySelectorAll('.info_link');
+      const urlsToSongsThatHasInfo = Array.from(trackInfoList)
+        .filter(info => info.textContent.includes('info'))
+        .map(info => `${location.origin}${info.querySelector('a').getAttribute('href')}`);
 
-          return text;
-        })
-      );
+      const hasLyricsOrInfo = lyricsList.some(i => i.lyrics !== undefined) || urlsToSongsThatHasInfo.length !== 0;
+      if (hasLyricsOrInfo) {
+        console.log("[marklet] this album has some track info. let's download it");
+        const trackTexts = await Promise.all(
+          lyricsList.map(async i => {
+            let text = i.title + '\n';
 
-      const tracksBody = d.artist + ' - ' + d.title + '\n\n' + trackTexts.join('\n\n');
+            // Infoがある曲
+            if (urlsToSongsThatHasInfo.includes(i.url)) {
+              const trackLd = await fetchJsonLd(i.url);
+              const info = trackLd.description;
+              const credit = trackLd.creditText;
+              if (info) text += '<Description>\n' + info + '\n';
+              if (credit) text += '<Credit>\n' + credit + '\n';
+            }
 
-      downloadTextFile(tracksBody, `${d.artist} - ${d.title} Tracks.txt`);
+            if (i.lyrics) text += '<Lyrics>\n' + i.lyrics;
+
+            return text;
+          })
+        );
+
+        const tracksBody = d.artist + ' - ' + d.title + '\n\n' + trackTexts.join('\n\n');
+
+        downloadTextFile(tracksBody, `${d.artist} - ${d.title} Tracks.txt`);
+      }
+    } /** Single */ else {
+      const d = {
+        artist: ld.byArtist.name,
+        title: ld.name,
+        url: ld['@id'],
+        description: ld.description ?? '-',
+        credits: ld.creditText ?? '-',
+        published: parseDate(ld.datePublished),
+        lisence: ld.copyrightNotice ?? '-',
+        publisherText: buildPublisherText(ld.publisher)
+      };
+
+      const lyricsText = document.querySelector('.lyricsText').textContent;
+
+      // prettier-ignore
+      let textBody =
+        d.artist +
+        '\n' +
+        d.title +
+        '\n' +
+        d.url +
+        '\n' +
+        '\n' +
+        '<Description>\n' +
+        d.description +
+        '\n' +
+        '\n' +
+        '<Credits>\n' +
+        d.credits +
+        '\n' +
+        '\n';
+
+      if (lyricsText != null) {
+        const cleanedLyricsText = lyricsText
+          .split('\n')
+          .map(l => l.trim())
+          .join('\n');
+        textBody = textBody + '<Lyrics>\n' + cleanedLyricsText + '\n\n';
+      }
+
+      textBody =
+        textBody +
+        '<Published>\n' +
+        d.published +
+        '\n' +
+        '\n' +
+        '<Lisence>\n' +
+        d.lisence +
+        '\n' +
+        '\n' +
+        '<Publisher>' +
+        '\n' +
+        d.publisherText;
+
+      downloadTextFile(textBody, `${d.artist} - ${d.title}.txt`);
     }
 
     console.log('[marklet] script finished!');
