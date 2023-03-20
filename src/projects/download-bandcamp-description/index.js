@@ -120,7 +120,7 @@
 
       const hasLyrics = document.querySelector('.lyricsRow') != null;
       if (hasLyrics) {
-        albumBody = albumBody + '\n\n' + '<Lyrics (In-page)>\n' + inpageLyrics.join('\n\n');
+        albumBody += '\n\n' + '<Lyrics (In-page)>\n' + inpageLyrics.join('\n\n');
       }
 
       downloadTextFile(albumBody, `${d.artist} - ${d.title}.txt`);
@@ -200,11 +200,10 @@
           .split('\n')
           .map(l => l.trim())
           .join('\n');
-        textBody = textBody + '<Lyrics>\n' + cleanedLyricsText + '\n\n';
+        textBody += '<Lyrics>\n' + cleanedLyricsText + '\n\n';
       }
 
-      textBody =
-        textBody +
+      textBody +=
         '<Published>\n' +
         d.published +
         '\n' +
