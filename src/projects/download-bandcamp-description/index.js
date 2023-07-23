@@ -7,6 +7,7 @@
     path.split('.').reduce((acc, v) => (acc = acc && acc[v]), value) ?? defaultValue;
 
   const parseDate = str => new Date(str).toISOString().slice(0, 10);
+  const sleep = (ms = 100) => new Promise(r => setTimeout(r, ms));
 
   // content をテキストファイルとしてダウンロードさせる
   const downloadTextFile = (content, filename) => {
@@ -124,6 +125,7 @@
       }
 
       downloadTextFile(albumBody, `${d.artist} - ${d.title}.txt`);
+      await sleep();
 
       // Track description //
 

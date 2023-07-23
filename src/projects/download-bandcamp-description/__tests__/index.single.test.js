@@ -4,6 +4,7 @@ import { readFileSync } from 'fs';
 import { resolve } from 'path';
 // import { setTimeout } from 'timers/promises';
 import { buildHtmlWithJsonLd, getDirname, mockedFetchFn } from '../../../../test/utils';
+import { sleep } from './shared';
 
 const readStubHtml = filename =>
   readFileSync(resolve(getDirname(import.meta.url), './__stub__/', filename), {
@@ -48,6 +49,8 @@ describe('download-bandcamp-description', () => {
 
         // execute script
         await import('../index');
+        // wait for finish
+        await sleep(200);
       });
 
       test('alert never to be called', () => {

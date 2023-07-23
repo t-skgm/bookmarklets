@@ -2,6 +2,7 @@ import { jest } from '@jest/globals';
 import { JSDOM } from 'jsdom';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
+import { sleep } from './shared';
 // import { setTimeout } from 'timers/promises';
 import { buildHtmlWithJsonLd, getDirname, mockedFetchFn } from '../../../../test/utils';
 
@@ -48,6 +49,9 @@ describe('download-bandcamp-description', () => {
 
         // execute script
         await import('../index');
+
+        // wait for finish
+        await sleep(200);
       });
 
       test('alert never to be called', () => {
