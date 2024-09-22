@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'fs/promises';
 import gcc from 'google-closure-compiler';
 const { compiler: Compiler } = gcc;
 
@@ -51,22 +51,25 @@ const compile = async projectId => {
   });
 };
 
-fs.readdir(configs.projectsDir, (_err, projectIds) => {
+const main = async () => {
+  const projectIds = await fs.readdir(configs.projectsDir);
   console.log('target projects:', projectIds);
 
-  Promise.all(
+  const scripts = await Promise.all(
     projectIds.map(async id => {
       const compiled = await compile(id);
 
       // save each script text
-      fs.writeFileSync(`${configs.distDir}${id}.txt`, compiled, { encoding: 'utf8' });
+      await fs.writeFile(`${configs.distDir}${id}.txt`, compiled, { encoding: 'utf8' });
 
       return { id, compiled };
     })
-  ).then(scripts => {
-    const htmlStr = toScriptHtmlStr(scripts);
-    fs.writeFileSync(configs.htmlPath, htmlStr, { encoding: 'utf8' });
+  );
 
-    console.log('done!', scripts);
-  });
-});
+  const htmlStr = toScriptHtmlStr(scripts);
+  await fs.writeFile(configs.htmlPath, htmlStr, { encoding: 'utf8' });
+
+  console.log('done!', scripts);
+};
+
+main().catch(console.error);
