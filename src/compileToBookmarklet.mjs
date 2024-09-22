@@ -17,13 +17,15 @@ const toScriptHtmlStr = scripts => `<html>
 <h1>Bookmarklets</h1>
 <p>使いたいBookmarkletをブックマークバーにドラッグ</p>
 <ul>
-${scripts.map(
-  script => `  <li>
+${scripts
+  .map(
+    script => `  <li>
     <a href="${encodeURI(script.compiled)}">
       ${kebabToNormal(script.id)}
     </a>
   </li>`
-)}
+  )
+  .join('\n')}
 </ul>
 </body>
 </html>
