@@ -10,7 +10,7 @@
     </a>
   </li>
   <li>
-    <a href="javascript:(()=%3E%7Bvar%20b=document.querySelector(%22#my-chord-data%22)?.querySelectorAll(%22.chord-row%22)??%5B%5D;b=Array.from(b).map(c=%3E%7Bc=c.querySelectorAll(%22.chord%22);return%20Array.from(c).map(a=%3E%7Bconst%20d=a.querySelector(%22ruby%20%3E%20rt%22)?.textContent??%22%22;a=a.querySelectorAll(%22&%20%3E%20span%22)?.%5B1%5D?.textContent??%22%22;return%60%5B$%7Bd%7D%5D$%7Ba%7D%60%7D).join(%22%20%22)%7D).join(%22%5Cn%22);copy(b);alert(%22Chord%20data%20copied%20to%20clipboard!%22)%7D)();">
+    <a href="javascript:(()=%3E%7Bconst%20c=document.querySelector(%22#my-chord-data%22)?.querySelectorAll(%22.chord-row%22)??%5B%5D,e=Array.from(c).map(a=%3E%7Ba=a.querySelectorAll(%22.chord%22);return%20Array.from(a).map(b=%3E%7Bconst%20d=b.querySelector(%22ruby%20%3E%20rt%22)?.textContent??%22%22;b=b.querySelectorAll(%22&%20%3E%20span%22)?.%5B1%5D?.textContent??%22%22;return%60%5B$%7Bd%7D%5D$%7Bb%7D%60%7D).join(%22%20%22)%7D).join(%22%5Cn%22);setTimeout(()=%3E%7Bnavigator.clipboard.writeText(e,500).then(()=%3E%7Balert(%22Chord%20data%20copied%20to%20clipboard!%22)%7D).catch(a=%3E%7Balert(%22Failed%20to%20copy%20chord%20data%20to%20clipboard:%22,a)%7D)%7D)%7D)();">
       Uf to chordpro
     </a>
   </li>

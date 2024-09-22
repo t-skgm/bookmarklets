@@ -22,7 +22,16 @@
 
   const chordText = rowTexts.join('\n');
 
-  copy(chordText);
-
-  alert('Chord data copied to clipboard!');
+  // wait until the document is focused
+  // https://blog.hog.as/entry/2021/09/30/021450
+  setTimeout(() => {
+    navigator.clipboard
+      .writeText(chordText, 500)
+      .then(() => {
+        alert('Chord data copied to clipboard!');
+      })
+      .catch(err => {
+        alert('Failed to copy chord data to clipboard:', err);
+      });
+  });
 })();
