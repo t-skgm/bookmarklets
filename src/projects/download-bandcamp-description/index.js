@@ -81,7 +81,7 @@
         description: ld.description ?? '-',
         credits: ld.creditText ?? '-',
         published: parseDate(ld.datePublished),
-        lisence: ld.copyrightNotice ?? '-',
+        license: ld.copyrightNotice ?? '-',
         tags: ld.keywords ? ld.keywords.join(', ') ?? '-' : '-',
         publisherText: buildPublisherText(ld.publisher)
       };
@@ -110,8 +110,8 @@
         '<Published>\n' +
         d.published  + '\n' +
         '\n' +
-        '<Lisence>\n' +
-        d.lisence  + '\n' +
+        '<License>\n' +
+        d.license  + '\n' +
         '\n' +
         '<Tags>\n' +
         d.tags +  '\n' +
@@ -173,7 +173,7 @@
         description: ld.description ?? '-',
         credits: ld.creditText ?? '-',
         published: parseDate(ld.datePublished),
-        lisence: ld.copyrightNotice ?? '-',
+        License: ld.copyrightNotice ?? '-',
         publisherText: buildPublisherText(ld.publisher)
       };
 
@@ -210,8 +210,8 @@
         d.published +
         '\n' +
         '\n' +
-        '<Lisence>\n' +
-        d.lisence +
+        '<License>\n' +
+        d.license +
         '\n' +
         '\n' +
         '<Publisher>' +

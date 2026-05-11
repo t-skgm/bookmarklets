@@ -12,8 +12,8 @@ const readStubHtml = filename =>
   });
 
 describe('download-bandcamp-description', () => {
-  describe('Single page', () => {
-    const albumHtmlC = readStubHtml('bandcamp_single.html');
+  describe('Track page', () => {
+    const albumHtmlC = readStubHtml('bandcamp_track.html');
 
     /** @type {JSDOM} */
     let dom;
@@ -35,7 +35,7 @@ describe('download-bandcamp-description', () => {
 
     test('test jsdom mocking', async () => {
       const documentTitle = document.querySelector('title').textContent;
-      expect(documentTitle).toMatchInlineSnapshot(`"Fall | Between Rooms"`);
+      expect(documentTitle).toMatchInlineSnapshot(`"▶︎ My Superman | Pictures Can Tell"`);
     });
 
     describe('execute script', () => {
