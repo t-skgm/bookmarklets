@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`download-bandcamp-description Single page execute script generated info text 1`] = `
+exports[`download-bandcamp-description Track page 1 execute script generated info text 1`] = `
 "Between Rooms
 Fall
 https://betweenrooms.bandcamp.com/track/fall
@@ -21,7 +21,7 @@ Cast their shadows over me.
 2021-10-04
 
 <License>
-undefined
+All Rights Reserved
 
 <Publisher>
 [name]

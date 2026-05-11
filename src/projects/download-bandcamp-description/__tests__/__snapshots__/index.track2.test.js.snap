@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`download-bandcamp-description Track page 2 execute script generated info text 1`] = `
+"Pictures Can Tell
+My Superman
+https://picturescantell.bandcamp.com/track/my-superman-2
+
+<Description>
+Demo recording of an unreleased song we loved playing live
+
+<Credits>
+-
+
+<Published>
+2026-05-11
+
+<License>
+All Rights Reserved
+
+<Publisher>
+[name]
+Pictures Can Tell
+
+[location]
+Salt Lake City, Utah"
+`;

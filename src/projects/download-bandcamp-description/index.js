@@ -165,7 +165,7 @@
 
         downloadTextFile(tracksBody, `${d.artist} - ${d.title} Tracks.txt`);
       }
-    } /** Single */ else {
+    } /** Track */ else {
       const d = {
         artist: ld.byArtist.name,
         title: ld.name,
@@ -173,11 +173,11 @@
         description: ld.description ?? '-',
         credits: ld.creditText ?? '-',
         published: parseDate(ld.datePublished),
-        License: ld.copyrightNotice ?? '-',
+        license: ld.copyrightNotice ?? '-',
         publisherText: buildPublisherText(ld.publisher)
       };
 
-      const lyricsText = document.querySelector('.lyricsText').textContent;
+      const lyricsText = document.querySelector('.lyricsText')?.textContent;
 
       // prettier-ignore
       let textBody =

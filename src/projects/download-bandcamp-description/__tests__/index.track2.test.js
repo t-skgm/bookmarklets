@@ -12,8 +12,8 @@ const readStubHtml = filename =>
   });
 
 describe('download-bandcamp-description', () => {
-  describe('Track page', () => {
-    const albumHtmlC = readStubHtml('bandcamp_track.html');
+  describe('Track page 2', () => {
+    const albumHtmlC = readStubHtml('bandcamp_track2.html');
 
     /** @type {JSDOM} */
     let dom;
@@ -68,4 +68,5 @@ describe('download-bandcamp-description', () => {
       });
     });
   });
+
 });
